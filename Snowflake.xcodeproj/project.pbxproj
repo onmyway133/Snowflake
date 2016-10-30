@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		92DEE5281DC69D0C001F9A98 /* Reindeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEE5271DC69D0C001F9A98 /* Reindeer.framework */; };
-		92DEE52B1DC69DAC001F9A98 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE52A1DC69DAC001F9A98 /* Shape.swift */; };
+		92DEE52D1DC6A142001F9A98 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE52C1DC6A142001F9A98 /* Shape.swift */; };
+		92DEE5311DC6A18F001F9A98 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE5301DC6A18F001F9A98 /* Rectangle.swift */; };
+		92DEE5331DC6A265001F9A98 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE5321DC6A265001F9A98 /* Circle.swift */; };
+		92DEE5351DC6A2E7001F9A98 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE5341DC6A2E7001F9A98 /* Document.swift */; };
+		92DEE5371DC6A30B001F9A98 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE5361DC6A30B001F9A98 /* Ellipse.swift */; };
+		92DEE5391DC6A32F001F9A98 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE5381DC6A32F001F9A98 /* Line.swift */; };
+		92DEE53B1DC6A3B7001F9A98 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE53A1DC6A3B7001F9A98 /* Polyline.swift */; };
+		92DEE53D1DC6A421001F9A98 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE53C1DC6A421001F9A98 /* Polygon.swift */; };
+		92DEE53F1DC6A442001F9A98 /* PathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE53E1DC6A442001F9A98 /* PathShape.swift */; };
 		D24F80A41DAE22C4008185FF /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A31DAE22C4008185FF /* iOSTests.swift */; };
 		D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
 		D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
@@ -40,7 +48,15 @@
 
 /* Begin PBXFileReference section */
 		92DEE5271DC69D0C001F9A98 /* Reindeer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reindeer.framework; path = Carthage/Build/iOS/Reindeer.framework; sourceTree = "<group>"; };
-		92DEE52A1DC69DAC001F9A98 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		92DEE52C1DC6A142001F9A98 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		92DEE5301DC6A18F001F9A98 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		92DEE5321DC6A265001F9A98 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		92DEE5341DC6A2E7001F9A98 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		92DEE5361DC6A30B001F9A98 /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
+		92DEE5381DC6A32F001F9A98 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		92DEE53A1DC6A3B7001F9A98 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
+		92DEE53C1DC6A421001F9A98 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		92DEE53E1DC6A442001F9A98 /* PathShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathShape.swift; sourceTree = "<group>"; };
 		D24F80A31DAE22C4008185FF /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
 		D24F80A71DAE2718008185FF /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		D24F80AA1DAE2727008185FF /* macOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
@@ -149,6 +165,15 @@
 			isa = PBXGroup;
 			children = (
 				D5C629821C3A892A007F7B7C /* iOS.swift */,
+				92DEE52C1DC6A142001F9A98 /* Shape.swift */,
+				92DEE5301DC6A18F001F9A98 /* Rectangle.swift */,
+				92DEE5321DC6A265001F9A98 /* Circle.swift */,
+				92DEE5341DC6A2E7001F9A98 /* Document.swift */,
+				92DEE5361DC6A30B001F9A98 /* Ellipse.swift */,
+				92DEE5381DC6A32F001F9A98 /* Line.swift */,
+				92DEE53A1DC6A3B7001F9A98 /* Polyline.swift */,
+				92DEE53C1DC6A421001F9A98 /* Polygon.swift */,
+				92DEE53E1DC6A442001F9A98 /* PathShape.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -165,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				D5C629861C3A89A8007F7B7C /* Shared.swift */,
-				92DEE52A1DC69DAC001F9A98 /* Shape.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -399,9 +423,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DEE53B1DC6A3B7001F9A98 /* Polyline.swift in Sources */,
+				92DEE5331DC6A265001F9A98 /* Circle.swift in Sources */,
+				92DEE53F1DC6A442001F9A98 /* PathShape.swift in Sources */,
+				92DEE5371DC6A30B001F9A98 /* Ellipse.swift in Sources */,
 				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
-				92DEE52B1DC69DAC001F9A98 /* Shape.swift in Sources */,
+				92DEE5351DC6A2E7001F9A98 /* Document.swift in Sources */,
+				92DEE52D1DC6A142001F9A98 /* Shape.swift in Sources */,
+				92DEE53D1DC6A421001F9A98 /* Polygon.swift in Sources */,
+				92DEE5391DC6A32F001F9A98 /* Line.swift in Sources */,
 				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
+				92DEE5311DC6A18F001F9A98 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
