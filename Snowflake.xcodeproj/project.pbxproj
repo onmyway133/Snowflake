@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92DEE5281DC69D0C001F9A98 /* Reindeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEE5271DC69D0C001F9A98 /* Reindeer.framework */; };
+		92DEE52B1DC69DAC001F9A98 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DEE52A1DC69DAC001F9A98 /* Shape.swift */; };
 		D24F80A41DAE22C4008185FF /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A31DAE22C4008185FF /* iOSTests.swift */; };
 		D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
 		D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92DEE5271DC69D0C001F9A98 /* Reindeer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reindeer.framework; path = Carthage/Build/iOS/Reindeer.framework; sourceTree = "<group>"; };
+		92DEE52A1DC69DAC001F9A98 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		D24F80A31DAE22C4008185FF /* iOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSTests.swift; sourceTree = "<group>"; };
 		D24F80A71DAE2718008185FF /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		D24F80AA1DAE2727008185FF /* macOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DEE5281DC69D0C001F9A98 /* Reindeer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92DEE5261DC69D0C001F9A98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DEE5271DC69D0C001F9A98 /* Reindeer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 				D5C6295C1C3A800E007F7B7C /* Snowflake */,
 				D5C6298F1C3A8BDA007F7B7C /* SnowflakeTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
+				92DEE5261DC69D0C001F9A98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D5C629861C3A89A8007F7B7C /* Shared.swift */,
+				92DEE52A1DC69DAC001F9A98 /* Shape.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
 				D5B2E89D1C3A780C00C0327D /* Resources */,
+				92DEE5291DC69D28001F9A98 /* Copy framework with Carthage */,
 			);
 			buildRules = (
 			);
@@ -360,12 +376,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		92DEE5291DC69D28001F9A98 /* Copy framework with Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Reindeer.framework",
+			);
+			name = "Copy framework with Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
+				92DEE52B1DC69DAC001F9A98 /* Shape.swift in Sources */,
 				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +547,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snowflake/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -531,6 +570,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Snowflake/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
