@@ -1,0 +1,17 @@
+osx_image: xcode8
+language: objective-c
+
+notifications:
+  email: false
+
+before_install:
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+- if brew outdated | grep -qx carthage; then brew upgrade carthage; fi
+- travis_wait 35 carthage bootstrap --platform iOS,Mac
+
+script:
+- xcodebuild clean build -project Snowflake.xcodeproj -scheme Snowflake-iOS -sdk iphonesimulator
+- xcodebuild test -project Snowflake.xcodeproj -scheme Snowflake-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
+- xcodebuild clean build -project Snowflake.xcodeproj -scheme Snowflake-Mac -sdk macosx
+- xcodebuild test -project Snowflake.xcodeproj -scheme Snowflake-Mac -sdk macosx
