@@ -5,6 +5,7 @@ class Style {
   let strokeWidth: CGFloat
   var fillColor: UIColor?
   let opacity: CGFloat
+  var fillRule: String?
   
   init(attributes: JSONDictionary) {
     var attributes = attributes
@@ -17,6 +18,7 @@ class Style {
     self.fillColor = attributes.color(key: "fill")
     self.strokeColor = attributes.color(key: "stroke") ?? .black
     self.opacity = attributes.number(key: "opacity") ?? 1
+    self.fillRule = Style.parse(fillRule: attributes.string(key: "fill-rule"))
   }
   
   static func parse(string: String) -> JSONDictionary {
@@ -32,5 +34,18 @@ class Style {
     }
     
     return attributes
+  }
+  
+  // MARK: - Helper
+  
+  static func parse(fillRule: String?) -> String? {
+    guard let fillRule = fillRule else { return nil }
+    
+    let mapping: [String: String] = [
+      "nonzero": kCAFillRuleNonZero,
+      "evenodd": kCAFillRuleEvenOdd
+    ]
+    
+    return mapping[fillRule]
   }
 }

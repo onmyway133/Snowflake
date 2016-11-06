@@ -24,6 +24,8 @@ class Shape {
     return shape?.init(attributes: element.attributes)
   }
   
+  // MARK: Layer
+  
   var layer: CAShapeLayer {
     let layer = CAShapeLayer()
     layer.path = path?.cgPath
@@ -32,6 +34,10 @@ class Shape {
     layer.lineWidth = style.strokeWidth
     layer.fillColor = style.fillColor?.cgColor
     layer.opacity = Float(style.opacity)
+    
+    if let fillRule = style.fillRule {
+      layer.fillRule = fillRule
+    }
     
     return layer
   }
