@@ -4,7 +4,7 @@ class Circle: Shape {
   let center: CGPoint
   let radius: CGFloat
   
-  override init?(attributes: JSONDictionary) {
+  required init(attributes: JSONDictionary) {
     fatalError()
   }
 }

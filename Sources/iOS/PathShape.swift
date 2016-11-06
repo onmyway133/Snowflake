@@ -2,7 +2,7 @@ import UIKit
 
 class PathShape: Shape {
   
-  override init?(attributes: JSONDictionary) {
+  required init(attributes: JSONDictionary) {
     fatalError()
   }
 }

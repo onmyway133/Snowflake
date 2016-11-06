@@ -4,7 +4,7 @@ class Rectangle: Shape {
   let frame: CGRect
   let cornerRadius: CGPoint
 
-  override init?(attributes: JSONDictionary) {
+  required init(attributes: JSONDictionary) {
     fatalError()
   }
 }
