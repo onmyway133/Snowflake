@@ -3,8 +3,10 @@ import Foundation
 extension Dictionary {
   
   func number(key: String) -> CGFloat? {
-    if let key = key as? Key {
-      return self[key] as? CGFloat
+    if let key = key as? Key,
+      let value = self[key] as? String,
+      let number = Double(value) {
+      return CGFloat(number)
     }
     
     return nil
