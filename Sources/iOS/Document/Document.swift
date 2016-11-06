@@ -10,7 +10,7 @@ public class Document {
   public init?(data: Data) {
     guard let document = try? Reindeer.Document(data: data) else { return nil }
     
-    components = document.rootElement.children(name: "svg").map {
+    components = document.rootElement.elements(XPath: "//svg").map {
       return Component(element: $0)
     }
   }

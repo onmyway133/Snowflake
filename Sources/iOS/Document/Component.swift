@@ -9,8 +9,8 @@ class Component {
   let size: CGSize
   
   init(element: Element) {
-    self.size = CGSize(width: element.attributes.number(key: "width"),
-                       height: element.attributes.number(key: "height"))
+    self.size = CGSize(width: element.attributes.number(key: "width") ?? 0,
+                       height: element.attributes.number(key: "height") ?? 0)
     
     self.shapes = element.children().flatMap {
       return Shape.make(element: $0)
@@ -20,17 +20,8 @@ class Component {
   }
   
   var layers: [CAShapeLayer] {
-    return paths.map { path in
-      let layer = CAShapeLayer()
-      layer.path = path.cgPath
-      
-      return layer
-    }
-  }
-  
-  var paths: [UIBezierPath] {
-    return shapes.flatMap { shape in
-      return shape.path
+    return shapes.map { shape in
+      return shape.layer
     }
   }
   

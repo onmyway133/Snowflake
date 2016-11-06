@@ -3,12 +3,14 @@ import Reindeer
 
 class Shape {
   var strokeColor: UIColor?
-  var strokeWidth: CGFloat?
+  let strokeWidth: CGFloat
   var fillColor: UIColor?
   var path: UIBezierPath?
   
   required init(attributes: JSONDictionary) {
-    
+    self.strokeWidth = attributes.number(key: "stroke-width") ?? 1
+    self.fillColor = attributes.color(key: "fill")
+    self.strokeColor = attributes.color(key: "stroke")
   }
   
   static func make(element: Element) -> Shape? {
@@ -23,5 +25,16 @@ class Shape {
     
     let shape = mapping[element.name ?? ""]
     return shape?.init(attributes: element.attributes)
+  }
+  
+  var layer: CAShapeLayer {
+    let layer = CAShapeLayer()
+    layer.path = path?.cgPath
+    
+    layer.strokeColor = strokeColor?.cgColor
+    layer.lineWidth = strokeWidth
+    layer.backgroundColor = fillColor?.cgColor
+    
+    return layer
   }
 }
