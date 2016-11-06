@@ -11,7 +11,7 @@ class Circle: Shape {
     
     super.init(attributes: attributes)
     
-    path = UIBezierPath(arcCenter: center, radius: radius,
+    self.path = UIBezierPath(arcCenter: center, radius: radius,
                         startAngle: 0, endAngle: CGFloat.pi * CGFloat(2),
                         clockwise: true)
   }

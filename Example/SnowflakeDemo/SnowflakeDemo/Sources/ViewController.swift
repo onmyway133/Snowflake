@@ -11,7 +11,7 @@ class ViewController: UIViewController {
   }
   
   func load() {
-    guard let path = Bundle.main.path(forResource: "circle", ofType: "svg"),
+    guard let path = Bundle.main.path(forResource: "rectangle2", ofType: "svg"),
       let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
       let document = Snowflake.Document(data: data)
     else { return }

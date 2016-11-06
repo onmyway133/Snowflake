@@ -10,7 +10,7 @@ class Shape {
   required init(attributes: JSONDictionary) {
     self.strokeWidth = attributes.number(key: "stroke-width") ?? 1
     self.fillColor = attributes.color(key: "fill")
-    self.strokeColor = attributes.color(key: "stroke")
+    self.strokeColor = attributes.color(key: "stroke") ?? .black
   }
   
   static func make(element: Element) -> Shape? {
@@ -20,7 +20,7 @@ class Shape {
       "line": Line.self,
       "polygon": Polygon.self,
       "polyline": Polyline.self,
-      "rectangle": Rectangle.self
+      "rect": Rectangle.self
     ]
     
     let shape = mapping[element.name ?? ""]
