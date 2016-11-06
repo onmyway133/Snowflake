@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     else { return }
     
     document.views.forEach { view in
+      view.center = self.view.center
       self.view.addSubview(view)
     }
   }

@@ -33,7 +33,7 @@ class Shape {
     
     layer.strokeColor = strokeColor?.cgColor
     layer.lineWidth = strokeWidth
-    layer.backgroundColor = fillColor?.cgColor
+    layer.fillColor = fillColor?.cgColor
     
     return layer
   }
