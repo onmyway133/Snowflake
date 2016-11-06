@@ -11,5 +11,14 @@ class Ellipse: Shape {
                           y: attributes.number(key: "ry") ?? 0)
     
     super.init(attributes: attributes)
+    
+    self.path = UIBezierPath(ovalIn: rect)
+  }
+  
+  var rect: CGRect {
+    return CGRect(x: center.x - radius.x,
+                  y: center.y - radius.y,
+                  width: radius.x * 2,
+                  height: radius.y * 2)
   }
 }

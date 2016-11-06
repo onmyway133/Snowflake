@@ -16,7 +16,8 @@ class Shape {
       "line": Line.self,
       "polygon": Polygon.self,
       "polyline": Polyline.self,
-      "rect": Rectangle.self
+      "rect": Rectangle.self,
+      "ellipse": Ellipse.self
     ]
     
     let shape = mapping[element.name ?? ""]
