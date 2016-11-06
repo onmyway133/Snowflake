@@ -3,15 +3,21 @@ import Reindeer
 
 typealias JSONDictionary = [String: Any]
 
-class Document {
+public class Document {
   
   let components: [Component]
   
-  init?(data: Data) {
+  public init?(data: Data) {
     guard let document = try? Reindeer.Document(data: data) else { return nil }
     
     components = document.rootElement.children(name: "svg").map {
       return Component(element: $0)
+    }
+  }
+  
+  public var views: [UIView] {
+    return components.map { component in
+      return component.view
     }
   }
 }
