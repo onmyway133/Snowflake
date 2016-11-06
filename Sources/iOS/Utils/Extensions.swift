@@ -4,9 +4,8 @@ extension Dictionary {
   
   func number(key: String) -> CGFloat? {
     if let key = key as? Key,
-      let value = self[key] as? String,
-      let number = Double(value) {
-      return CGFloat(number)
+      let value = self[key] as? String {
+      return CGFloat(string: value)
     }
     
     return nil
@@ -26,5 +25,13 @@ extension Dictionary {
     }
     
     return nil
+  }
+}
+
+extension CGFloat {
+  
+  init(string: String) {
+    let value = Double(string) ?? 0
+    self = CGFloat(value)
   }
 }
