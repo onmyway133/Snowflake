@@ -5,6 +5,11 @@ class Ellipse: Shape {
   let radius: CGPoint
   
   required init(attributes: JSONDictionary) {
-    fatalError()
+    self.center = CGPoint(x: attributes.number(key: "cx") ?? 0,
+                          y: attributes.number(key: "cy") ?? 0)
+    self.radius = CGPoint(x: attributes.number(key: "rx") ?? 0,
+                          y: attributes.number(key: "ry") ?? 0)
+    
+    super.init(attributes: attributes)
   }
 }
