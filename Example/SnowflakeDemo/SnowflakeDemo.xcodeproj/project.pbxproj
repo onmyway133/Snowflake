@@ -14,7 +14,6 @@
 		924D19B21DCFC80C00E18BB1 /* line.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19A91DCFC80C00E18BB1 /* line.svg */; };
 		924D19B31DCFC80C00E18BB1 /* path1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19AA1DCFC80C00E18BB1 /* path1.svg */; };
 		924D19B41DCFC80C00E18BB1 /* path2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19AB1DCFC80C00E18BB1 /* path2.svg */; };
-		924D19B61DCFC80C00E18BB1 /* polyline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19AD1DCFC80C00E18BB1 /* polyline.svg */; };
 		924D19B81DCFC80C00E18BB1 /* text1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19AF1DCFC80C00E18BB1 /* text1.svg */; };
 		924D19B91DCFC80C00E18BB1 /* text2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19B01DCFC80C00E18BB1 /* text2.svg */; };
 		924D19BC1DCFC8ED00E18BB1 /* rectangle1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19BA1DCFC8ED00E18BB1 /* rectangle1.svg */; };
@@ -26,6 +25,8 @@
 		924D19C91DCFE06800E18BB1 /* polygon2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19C51DCFE06800E18BB1 /* polygon2.svg */; };
 		924D19CA1DCFE06800E18BB1 /* polygon3.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19C61DCFE06800E18BB1 /* polygon3.svg */; };
 		924D19CB1DCFE06800E18BB1 /* polygon4.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19C71DCFE06800E18BB1 /* polygon4.svg */; };
+		924D19CE1DCFE49F00E18BB1 /* polyline1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19CC1DCFE49F00E18BB1 /* polyline1.svg */; };
+		924D19CF1DCFE49F00E18BB1 /* polyline2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19CD1DCFE49F00E18BB1 /* polyline2.svg */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -39,7 +40,6 @@
 		924D19A91DCFC80C00E18BB1 /* line.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = line.svg; sourceTree = "<group>"; };
 		924D19AA1DCFC80C00E18BB1 /* path1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path1.svg; sourceTree = "<group>"; };
 		924D19AB1DCFC80C00E18BB1 /* path2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path2.svg; sourceTree = "<group>"; };
-		924D19AD1DCFC80C00E18BB1 /* polyline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polyline.svg; sourceTree = "<group>"; };
 		924D19AF1DCFC80C00E18BB1 /* text1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text1.svg; sourceTree = "<group>"; };
 		924D19B01DCFC80C00E18BB1 /* text2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text2.svg; sourceTree = "<group>"; };
 		924D19BA1DCFC8ED00E18BB1 /* rectangle1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rectangle1.svg; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		924D19C51DCFE06800E18BB1 /* polygon2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polygon2.svg; sourceTree = "<group>"; };
 		924D19C61DCFE06800E18BB1 /* polygon3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polygon3.svg; sourceTree = "<group>"; };
 		924D19C71DCFE06800E18BB1 /* polygon4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polygon4.svg; sourceTree = "<group>"; };
+		924D19CC1DCFE49F00E18BB1 /* polyline1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polyline1.svg; sourceTree = "<group>"; };
+		924D19CD1DCFE49F00E18BB1 /* polyline2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polyline2.svg; sourceTree = "<group>"; };
 		9D3ABF4251B42A44636A6FE7 /* Pods-SnowflakeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowflakeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnowflakeDemo/Pods-SnowflakeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A3C4E929B6D8BF276C042446 /* Pods-SnowflakeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowflakeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnowflakeDemo/Pods-SnowflakeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C79D1D44812598EEB13F6D2D /* Pods_SnowflakeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowflakeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,8 @@
 		D5C7F7561C3BCA1E008CDDBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				924D19CC1DCFE49F00E18BB1 /* polyline1.svg */,
+				924D19CD1DCFE49F00E18BB1 /* polyline2.svg */,
 				924D19C41DCFE06800E18BB1 /* polygon1.svg */,
 				924D19C51DCFE06800E18BB1 /* polygon2.svg */,
 				924D19C61DCFE06800E18BB1 /* polygon3.svg */,
@@ -135,7 +139,6 @@
 				924D19A91DCFC80C00E18BB1 /* line.svg */,
 				924D19AA1DCFC80C00E18BB1 /* path1.svg */,
 				924D19AB1DCFC80C00E18BB1 /* path2.svg */,
-				924D19AD1DCFC80C00E18BB1 /* polyline.svg */,
 				924D19AF1DCFC80C00E18BB1 /* text1.svg */,
 				924D19B01DCFC80C00E18BB1 /* text2.svg */,
 				924D19A21DCFC42800E18BB1 /* christmas.svg */,
@@ -225,13 +228,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924D19B61DCFC80C00E18BB1 /* polyline.svg in Resources */,
 				924D19C01DCFD88E00E18BB1 /* ellipse1.svg in Resources */,
 				924D19BD1DCFC8EE00E18BB1 /* rectangle2.svg in Resources */,
 				D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */,
 				924D19B81DCFC80C00E18BB1 /* text1.svg in Resources */,
+				924D19CE1DCFE49F00E18BB1 /* polyline1.svg in Resources */,
 				D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */,
 				924D19CB1DCFE06800E18BB1 /* polygon4.svg in Resources */,
+				924D19CF1DCFE49F00E18BB1 /* polyline2.svg in Resources */,
 				924D19B21DCFC80C00E18BB1 /* line.svg in Resources */,
 				924D19A61DCFC42800E18BB1 /* circle.svg in Resources */,
 				924D19C81DCFE06800E18BB1 /* polygon1.svg in Resources */,
