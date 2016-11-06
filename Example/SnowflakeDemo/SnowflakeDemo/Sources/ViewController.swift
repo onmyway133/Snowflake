@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     else { return }
     
     document.views.forEach { view in
-      view.addSubview(view)
+      self.view.addSubview(view)
     }
   }
 }
