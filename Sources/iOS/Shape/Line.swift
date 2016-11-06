@@ -11,8 +11,9 @@ class Line: Shape {
                           y: attributes.number(key: "y2") ?? 0)
     
     super.init(attributes: attributes)
-    path = UIBezierPath()
-    path?.move(to: point1)
-    path?.addLine(to: point2)
+    
+    self.path = UIBezierPath()
+    self.path?.move(to: point1)
+    self.path?.addLine(to: point2)
   }
 }
