@@ -53,7 +53,12 @@ struct Color {
   
   // http://www.december.com/html/spec/colorsvghex.html
   static let mapping: [String: String] = [
-    "green": "008000",
-    "yellow": "FFFF00"
+    "black": "000000",
+    "white": "FFFFFF",
+    "red": "FF0000",
+    "green": "00FF00",
+    "blue": "0000FF",
+    "yellow": "FFFF00",
+    "pink": "FFC0CB",
   ]
 }

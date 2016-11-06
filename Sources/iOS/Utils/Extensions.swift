@@ -26,6 +26,22 @@ extension Dictionary {
     
     return nil
   }
+  
+  func merge(another: JSONDictionary) -> JSONDictionary {
+    var result = JSONDictionary()
+    
+    self.forEach {
+      if let key = $0 as? String {
+        result[key] = $1
+      }
+    }
+    
+    another.forEach {
+      result[$0] = $1
+    }
+    
+    return result
+  }
 }
 
 extension CGFloat {

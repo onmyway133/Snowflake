@@ -4,8 +4,6 @@ import Reindeer
 class Component {
   
   let shapes: [Shape]
-  let styles: [Style]
-  
   let size: CGSize
   
   init(element: Element) {
@@ -15,8 +13,6 @@ class Component {
     self.shapes = element.children().flatMap {
       return Shape.make(element: $0)
     }
-    
-    self.styles = []
   }
   
   var layers: [CAShapeLayer] {
