@@ -61,6 +61,6 @@ struct Color {
     "yellow": "FFFF00",
     "pink": "FFC0CB",
     "purple": "FF00FF",
-    "lime": "00FF00"
+    "lime": "00FF00",
   ]
 }
