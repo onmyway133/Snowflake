@@ -29,6 +29,7 @@ class PathShape: Shape {
 
       if scanner.scanLocation == string.characters.count {
         commands.append(ClosePathCommand())
+        break
       } else if let command = Command.make(initial: String(initial!), string: String(numbers!)) {
         commands.append(command)
       }
