@@ -14,7 +14,8 @@ class Command {
 
   class func make(initial: String, string: String) -> Command? {
     let type: Command.Type? = availableCommands[initial.uppercased()]
-    return type?.init(string: string, kind: .absolute)
+    let kind: Kind = Utils.isLowercase(string: initial) ? .relative : .absolute
+    return type?.init(string: string, kind: kind)
   }
 
   static let availableCommands: [String: Command.Type] = [
