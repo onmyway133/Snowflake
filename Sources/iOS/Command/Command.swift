@@ -1,8 +1,8 @@
 import Foundation
 
 class Command {
-    
-    enum Kind {
-        case absolute, relative
-    }
+
+  enum Kind {
+    case absolute, relative
+  }
 }
