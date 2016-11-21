@@ -23,8 +23,8 @@ class Polyline: Shape {
     return pairs.flatMap { pair in
       let components = pair.components(separatedBy: ",")
       if components.count == 2 {
-        return CGPoint(x: Utils.float(string: components[0]),
-                       y: Utils.float(string: components[1]))
+        return CGPoint(x: Utils.number(string: components[0]),
+                       y: Utils.number(string: components[1]))
       } else {
         return nil
       }

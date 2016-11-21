@@ -8,13 +8,13 @@ class Command {
 
   let kind: Kind
 
-  required init(numbers: String, kind: Kind) {
+  required init(string: String, kind: Kind) {
     self.kind = kind
   }
 
-  class func make(initial: String, numbers: String) -> Command? {
+  class func make(initial: String, string: String) -> Command? {
     let type: Command.Type? = availableCommands[initial.uppercased()]
-    return type?.init(numbers: numbers, kind: .absolute)
+    return type?.init(string: string, kind: .absolute)
   }
 
   static let availableCommands: [String: Command.Type] = [

@@ -5,7 +5,7 @@ extension Dictionary {
   func number(key: String) -> CGFloat? {
     if let key = key as? Key,
       let value = self[key] as? String {
-      return Utils.float(string: value)
+      return Utils.number(string: value)
     }
     
     return nil
