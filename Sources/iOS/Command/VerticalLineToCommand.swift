@@ -7,7 +7,7 @@ class VerticalLineToCommand: Command {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
-    if numbers.count == 1 {
+    if numbers.count >= 1 {
       y = numbers[0]
     }
   }

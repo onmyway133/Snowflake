@@ -7,7 +7,7 @@ class LineToCommand: Command {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
-    if numbers.count == 2 {
+    if numbers.count >= 2 {
       point = CGPoint(x: numbers[0], y: numbers[1])
     }
   }
