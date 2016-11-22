@@ -17,7 +17,7 @@ class QuadraticBezierCurveCommand: Command {
   override func act(path: UIBezierPath) {
     switch kind {
     case .absolute:
-      break
+      path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
     case .relative:
       break
     }
