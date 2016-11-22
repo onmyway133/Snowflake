@@ -10,7 +10,7 @@ struct Color {
     } else if let hexString = mapping[name] {
       return color(hexString: hexString)
     } else {
-      return UIColor.white
+      return UIColor.clear
     }
   }
   

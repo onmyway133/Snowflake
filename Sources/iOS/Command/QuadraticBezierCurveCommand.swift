@@ -19,7 +19,8 @@ class QuadraticBezierCurveCommand: Command {
     case .absolute:
       path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
     case .relative:
-      break
+      path.addQuadCurve(to: path.currentPoint.add(p: endPoint),
+                        controlPoint: path.currentPoint.add(p: controlPoint))
     }
   }
 }
