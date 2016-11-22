@@ -8,7 +8,7 @@ class QuadraticBezierCurveCommand: Command {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
-    if numbers.count >= 4 {
+    if numbers.count == 4 {
       controlPoint = CGPoint(x: numbers[0], y: numbers[1])
       endPoint = CGPoint(x: numbers[2], y: numbers[3])
     }
