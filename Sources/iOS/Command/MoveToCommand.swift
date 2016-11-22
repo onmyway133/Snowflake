@@ -6,9 +6,19 @@ class MoveToCommand: Command {
   required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
-    let numbers  = Utils.numbers(string: string)
+    let numbers = Utils.numbers(string: string)
     if numbers.count == 2 {
       point = CGPoint(x: numbers[0], y: numbers[1])
+    }
+  }
+
+  override func act(path: UIBezierPath) {
+    switch kind {
+    case .absolute:
+      path.move(to: point)
+    case .relative:
+      let end = Utils.add(p1: path.currentPoint, p2: point)
+      path.move(to: end)
     }
   }
 }

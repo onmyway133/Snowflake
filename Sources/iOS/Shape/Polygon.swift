@@ -4,7 +4,7 @@ class Polygon: Shape {
   var points: [CGPoint] = []
   
   required init(attributes: JSONDictionary) {
-    self.points = Polyline.parse(string: attributes.string(key: "points"))
+    self.points = Utils.points(string: attributes.string(key: "points"), outerSeparator: " ", innerSeparator: ",")
     
     super.init(attributes: attributes)
     

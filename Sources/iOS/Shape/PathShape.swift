@@ -9,7 +9,12 @@ class PathShape: Shape {
     
     super.init(attributes: attributes)
     
-    self.path = UIBezierPath()
+    let path = UIBezierPath()
+    self.commands.forEach { command in
+      command.act(path: path)
+    }
+    
+    self.path = path
   }
   
   static func parse(string: String) -> [Command] {

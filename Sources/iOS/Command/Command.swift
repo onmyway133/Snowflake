@@ -12,6 +12,12 @@ class Command {
     self.kind = kind
   }
 
+  func act(path: UIBezierPath) {
+    
+  }
+}
+
+extension Command {
   class func make(initial: String, string: String) -> Command? {
     let type: Command.Type? = availableCommands[initial.uppercased()]
     let kind: Kind = Utils.isLowercase(string: initial) ? .relative : .absolute
