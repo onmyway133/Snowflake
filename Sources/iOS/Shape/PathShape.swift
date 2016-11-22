@@ -18,7 +18,7 @@ class PathShape: Shape {
   }
   
   static func parse(string: String) -> [Command] {
-    let set = CharacterSet.letters
+    let set = CharacterSet(charactersIn: Command.letters)
     let scanner = Scanner(string: string)
 
     var initial: NSString? = ""
@@ -32,11 +32,13 @@ class PathShape: Shape {
       scanner.scanUpToCharacters(from: set, into: &numbers)
       guard numbers!.length > 0 else { break }
 
+      if let command = Command.make(initial: String(initial!), string: String(numbers!)) {
+        commands.append(command)
+      }
+
       if scanner.scanLocation == string.characters.count {
         commands.append(ClosePathCommand())
         break
-      } else if let command = Command.make(initial: String(initial!), string: String(numbers!)) {
-        commands.append(command)
       }
     } while initial!.length > 0
     

@@ -8,7 +8,7 @@ struct Utils {
   }
 
   static func numbers(string: String) -> [CGFloat] {
-    return string.components(separatedBy: " ").flatMap {
+    return string.trim().components(separatedBy: " ").flatMap {
       return number(string: $0)
     }
   }
@@ -24,9 +24,9 @@ struct Utils {
   }
 
   static func points(string: String?, outerSeparator: String, innerSeparator: String) -> [CGPoint] {
-    let pairs: [String] = string?.components(separatedBy: outerSeparator) ?? []
+    let pairs: [String] = string?.trim().components(separatedBy: outerSeparator) ?? []
     return pairs.flatMap { pair in
-      let components = pair.components(separatedBy: innerSeparator)
+      let components = pair.trim().components(separatedBy: innerSeparator)
       if components.count == 2 {
         return CGPoint(x: Utils.number(string: components[0]),
                        y: Utils.number(string: components[1]))
@@ -34,17 +34,5 @@ struct Utils {
         return nil
       }
     }
-  }
-
-  static func add(p1: CGPoint, p2: CGPoint) -> CGPoint {
-    return CGPoint(x: p1.x + p2.x, y: p1.y + p2.y)
-  }
-
-  static func add(p: CGPoint, x: CGFloat) -> CGPoint {
-    return CGPoint(x: p.x + x, y: p.y)
-  }
-
-  static func add(p: CGPoint, y: CGFloat) -> CGPoint {
-    return CGPoint(x: p.x, y: p.y + y)
   }
 }

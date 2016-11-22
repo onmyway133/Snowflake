@@ -18,7 +18,7 @@ class VerticalLineToCommand: Command {
       let end = CGPoint(x: 0, y: y)
       path.addLine(to: end)
     case .relative:
-      let end = Utils.add(p1: path.currentPoint, p2: CGPoint(x: 0, y: y))
+      let end = path.currentPoint.add(p: CGPoint(x: 0, y: y))
       path.addLine(to: end)
     }
   }

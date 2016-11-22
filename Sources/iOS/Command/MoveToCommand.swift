@@ -17,7 +17,7 @@ class MoveToCommand: Command {
     case .absolute:
       path.move(to: point)
     case .relative:
-      let end = Utils.add(p1: path.currentPoint, p2: point)
+      let end = path.currentPoint.add(p: point)
       path.move(to: end)
     }
   }

@@ -17,7 +17,7 @@ class LineToCommand: Command {
     case .absolute:
       path.addLine(to: point)
     case .relative:
-      let end = Utils.add(p1: path.currentPoint, p2: point)
+      let end = path.currentPoint.add(p: point)
       path.addLine(to: end)
     }
   }

@@ -43,3 +43,24 @@ extension Dictionary {
     return result
   }
 }
+
+extension String {
+
+  func trim() -> String {
+    return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+  }
+}
+
+extension CGPoint {
+  func add(p: CGPoint) -> CGPoint {
+    return CGPoint(x: x + p.x, y: y + p.y)
+  }
+
+  func add(x: CGFloat) -> CGPoint {
+    return CGPoint(x: self.x + x, y: y)
+  }
+
+  func add(y: CGFloat) -> CGPoint {
+    return CGPoint(x: x, y: self.y + y)
+  }
+}

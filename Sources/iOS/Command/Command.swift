@@ -36,4 +36,14 @@ extension Command {
     "A": EllipticalArcCommand.self,
     "Z": ClosePathCommand.self
   ]
+
+  static var letters: String {
+    var result = ""
+    availableCommands.forEach { (key, value) in
+      result.append(key)
+      result.append(key.lowercased())
+    }
+
+    return result
+  }
 }

@@ -18,7 +18,7 @@ class HorizontalLineToCommand: Command {
       let end = CGPoint(x: x, y: 0)
       path.addLine(to: end)
     case .relative:
-      let end = Utils.add(p1: path.currentPoint, p2: CGPoint(x: x, y: 0))
+      let end = path.currentPoint.add(p: CGPoint(x: x, y: 0))
       path.addLine(to: end)
     }
   }
