@@ -28,6 +28,7 @@
 		924D19CE1DCFE49F00E18BB1 /* polyline1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19CC1DCFE49F00E18BB1 /* polyline1.svg */; };
 		924D19CF1DCFE49F00E18BB1 /* polyline2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19CD1DCFE49F00E18BB1 /* polyline2.svg */; };
 		D226645B1DE4FFAC00DDAC1A /* path_a1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D226645A1DE4FFAC00DDAC1A /* path_a1.svg */; };
+		D28A4DC01DE64F610009FBF8 /* path_a2.svg in Resources */ = {isa = PBXBuildFile; fileRef = D28A4DBF1DE64F610009FBF8 /* path_a2.svg */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		A3C4E929B6D8BF276C042446 /* Pods-SnowflakeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowflakeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnowflakeDemo/Pods-SnowflakeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C79D1D44812598EEB13F6D2D /* Pods_SnowflakeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowflakeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D226645A1DE4FFAC00DDAC1A /* path_a1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path_a1.svg; sourceTree = "<group>"; };
+		D28A4DBF1DE64F610009FBF8 /* path_a2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_a2.svg; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* SnowflakeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowflakeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		D5C7F7561C3BCA1E008CDDBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D28A4DBF1DE64F610009FBF8 /* path_a2.svg */,
 				D226645A1DE4FFAC00DDAC1A /* path_a1.svg */,
 				924D19CC1DCFE49F00E18BB1 /* polyline1.svg */,
 				924D19CD1DCFE49F00E18BB1 /* polyline2.svg */,
@@ -233,6 +236,7 @@
 			files = (
 				924D19C01DCFD88E00E18BB1 /* ellipse1.svg in Resources */,
 				924D19BD1DCFC8EE00E18BB1 /* rectangle2.svg in Resources */,
+				D28A4DC01DE64F610009FBF8 /* path_a2.svg in Resources */,
 				D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */,
 				D226645B1DE4FFAC00DDAC1A /* path_a1.svg in Resources */,
 				924D19B81DCFC80C00E18BB1 /* text1.svg in Resources */,
