@@ -4,7 +4,7 @@ class Polyline: Shape {
   let points: [CGPoint]
   
   required init(attributes: JSONDictionary) {
-    self.points = Utils.points(string: attributes.string(key: "points"), outerSeparator: " ", innerSeparator: ",")
+    self.points = Utils.points(string: attributes.string(key: "points"))
     
     super.init(attributes: attributes)
     

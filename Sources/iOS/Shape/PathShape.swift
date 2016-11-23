@@ -37,7 +37,6 @@ class PathShape: Shape {
       }
 
       if scanner.scanLocation == string.characters.count {
-        commands.append(ClosePathCommand())
         break
       }
     } while initial!.length > 0
