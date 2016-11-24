@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Reindeer:
-    :commit: 414c1ddb5c98b2f5a5150eebb27d3b0af69465e8
+    :commit: a54a2ea47a77b2e17909eed645e10b3cb98154f7
     :git: https://github.com/onmyway133/Reindeer.git
 
 SPEC CHECKSUMS:
