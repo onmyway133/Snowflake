@@ -9,9 +9,15 @@ public class Document {
   
   public init?(data: Data) {
     guard let document = try? Reindeer.Document(data: data) else { return nil }
-    
-    components = document.rootElement.elements(XPath: "//svg").map {
-      return Component(element: $0)
+
+    if document.hasNamespace {
+      components = document.rootElement.elements(XPath: "//new:svg", namespace: "new").map {
+        return Component(element: $0)
+      }
+    } else {
+      components = document.rootElement.elements(XPath: "//svg").map {
+        return Component(element: $0)
+      }
     }
   }
   
