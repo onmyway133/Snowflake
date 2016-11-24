@@ -16,7 +16,7 @@ class CurveToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath) {
+  override func act(path: UIBezierPath, previousCommand: Command?) {
     switch kind {
     case .absolute:
       path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)

@@ -10,6 +10,7 @@ public class Document {
   public init?(data: Data) {
     guard let document = try? Reindeer.Document(data: data) else { return nil }
 
+    // http://stackoverflow.com/questions/3135175/libxml2-error-with-namespaces-and-xpath
     if document.hasNamespace {
       components = document.rootElement.elements(XPath: "//new:svg", namespace: "new").map {
         return Component(element: $0)

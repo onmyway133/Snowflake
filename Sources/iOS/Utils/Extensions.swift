@@ -63,4 +63,8 @@ extension CGPoint {
   func add(y: CGFloat) -> CGPoint {
     return CGPoint(x: x, y: self.y + y)
   }
+
+  func reflected() -> CGPoint {
+    return CGPoint(x: y, y: x)
+  }
 }

@@ -6,7 +6,7 @@ class ClosePathCommand: Command {
     self.init(string: "", kind: .absolute)
   }
 
-  override func act(path: UIBezierPath) {
+  override func act(path: UIBezierPath, previousCommand: Command?) {
     path.close()
   }
 }

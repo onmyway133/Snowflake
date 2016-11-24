@@ -12,9 +12,12 @@ struct Utils {
       return []
     }
 
-    return string.trim().replacingOccurrences(of: ",", with: " ").components(separatedBy: " ").flatMap {
-      return number(string: $0)
-    }
+    return string.trim()
+      .replacingOccurrences(of: ",", with: " ")
+      .replacingOccurrences(of: "  ", with: " ")
+      .components(separatedBy: " ").flatMap {
+        return number(string: $0)
+      }
   }
 
   static func isLowercase(string: String) -> Bool {

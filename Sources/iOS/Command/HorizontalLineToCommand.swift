@@ -12,7 +12,7 @@ class HorizontalLineToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath) {
+  override func act(path: UIBezierPath, previousCommand: Command?) {
     switch kind {
     case .absolute:
       let end = CGPoint(x: x, y: 0)

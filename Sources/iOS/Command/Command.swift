@@ -12,7 +12,7 @@ class Command {
     self.kind = kind
   }
 
-  func act(path: UIBezierPath) {
+  func act(path: UIBezierPath, previousCommand: Command?) {
     
   }
 }

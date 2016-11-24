@@ -10,8 +10,9 @@ class PathShape: Shape {
     super.init(attributes: attributes)
     
     let path = UIBezierPath()
-    self.commands.forEach { command in
-      command.act(path: path)
+    self.commands.enumerated().forEach { (index, command) in
+      var previousCommand: Command? = index > 0 ? commands[index-1] : nil
+      command.act(path: path, previousCommand: previousCommand)
     }
     
     self.path = path
