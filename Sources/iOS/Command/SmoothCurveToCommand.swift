@@ -11,7 +11,6 @@ class SmoothCurveToCommand: Command {
     let numbers = Utils.numbers(string: string)
     if numbers.count == 4 {
       controlPoint1 = CGPoint(x: numbers[0], y: numbers[1])
-      controlPoint2 = controlPoint1
       endPoint = CGPoint(x: numbers[2], y: numbers[3])
     }
   }
@@ -21,6 +20,8 @@ class SmoothCurveToCommand: Command {
       controlPoint1 = previousCommand.controlPoint2.reflected().add(p: path.currentPoint)
     } else if let previousCommand = previousCommand as? SmoothCurveToCommand {
       controlPoint1 = previousCommand.controlPoint2.reflected().add(p: path.currentPoint)
+    } else {
+      controlPoint1 = path.currentPoint
     }
 
     switch kind {

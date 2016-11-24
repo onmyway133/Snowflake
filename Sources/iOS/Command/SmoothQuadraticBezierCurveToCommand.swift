@@ -18,6 +18,8 @@ class SmoothQuadraticBezierCurveToCommand: Command {
       controlPoint = previousCommand.controlPoint.add(p: path.currentPoint)
     } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {
       controlPoint = previousCommand.controlPoint.add(p: path.currentPoint)
+    } else {
+      controlPoint = path.currentPoint
     }
 
     switch kind {
