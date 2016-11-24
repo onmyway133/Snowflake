@@ -17,9 +17,21 @@ class SmoothCurveToCommand: Command {
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
     if let previousCommand = previousCommand as? CurveToCommand {
-      controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+      switch previousCommand.kind {
+      case .absolute:
+        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+      case .relative:
+        let old = path.currentPoint.subtract(p: previousCommand.endPoint)
+        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
+      }
     } else if let previousCommand = previousCommand as? SmoothCurveToCommand {
-      controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+      switch previousCommand.kind {
+      case .absolute:
+        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+      case .relative:
+        let old = path.currentPoint.subtract(p: previousCommand.endPoint)
+        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
+      }
     } else {
       controlPoint1 = path.currentPoint
     }

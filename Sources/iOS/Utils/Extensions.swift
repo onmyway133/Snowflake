@@ -64,7 +64,15 @@ extension CGPoint {
     return CGPoint(x: x, y: self.y + y)
   }
 
+  func subtract(p: CGPoint) -> CGPoint {
+    return CGPoint(x: x - p.x, y: y - p.y)
+  }
+
   func reflect(point: CGPoint) -> CGPoint {
     return CGPoint(x: 2*x - point.x, y: 2*y - point.y)
+  }
+
+  func reflect(point: CGPoint, old: CGPoint) -> CGPoint {
+    return CGPoint(x: 2*x - point.x + old.x, y: 2*y - point.y + old.y)
   }
 }
