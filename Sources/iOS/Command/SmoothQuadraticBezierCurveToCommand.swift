@@ -24,7 +24,6 @@ class SmoothQuadraticBezierCurveToCommand: Command {
 
     if kind == .relative {
       endPoint = path.currentPoint.add(p: endPoint)
-      controlPoint = path.currentPoint.add(p: controlPoint)
     }
 
     path.addQuadCurve(to: endPoint, controlPoint: controlPoint)

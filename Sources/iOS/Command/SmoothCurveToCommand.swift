@@ -26,7 +26,6 @@ class SmoothCurveToCommand: Command {
 
     if kind == .relative {
       endPoint = path.currentPoint.add(p: endPoint)
-      controlPoint1 = path.currentPoint.add(p: controlPoint1)
       controlPoint2 = path.currentPoint.add(p: controlPoint2)
     }
 
