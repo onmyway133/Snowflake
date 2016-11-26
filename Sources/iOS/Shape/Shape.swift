@@ -1,12 +1,12 @@
 import UIKit
 import Reindeer
 
-class Shape {
+public class Shape {
   let id: String
   let style: Style
   var path: UIBezierPath?
 
-  required init(attributes: JSONDictionary) {
+  public required init(attributes: JSONDictionary) {
     self.id = attributes.string(key: "id") ?? ""
     self.style = Style(attributes: attributes)
   }

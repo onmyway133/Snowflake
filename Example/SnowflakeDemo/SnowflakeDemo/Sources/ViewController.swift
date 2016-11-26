@@ -62,11 +62,10 @@ class ViewController: UIViewController {
       let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
       let document = Snowflake.Document(data: data)
     else { return }
-    
-    document.views.forEach { view in
-      view.center = self.view.center
-      self.view.addSubview(view)
-    }
+
+    let svgView = document.svg.view
+    svgView.center = self.view.center
+    self.view.addSubview(svgView)
   }
 }
 
