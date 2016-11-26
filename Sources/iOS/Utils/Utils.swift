@@ -3,8 +3,11 @@ import Foundation
 struct Utils {
 
   static func number(string: String) -> CGFloat {
-    let value = Double(string) ?? 0
-    return CGFloat(value)
+    var number: Float = 0
+    let scanner = Scanner(string: string)
+    scanner.scanFloat(&number)
+
+    return CGFloat(number)
   }
 
   static func numbers(string: String?) -> [CGFloat] {
