@@ -11,12 +11,20 @@
 
 ## Description
 
-**Snowflake** description.
+- SVG in Swift
+- Use XML parser from [Reindeer](https://github.com/onmyway133/Reindeer)
 
 ## Usage
 
+### Document
+
 ```swift
-<API>
+guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
+  let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+   let document = Snowflake.Document(data: data)
+ else { return }
+
+let _ = document.svg.view
 ```
 
 ## Installation
@@ -25,7 +33,8 @@
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Snowflake'
+pod 'Reindeer', git: 'https://github.com/onmyway133/Reindeer'
+pod 'Snowflake', git: 'https://github.com/onmyway133/Snowflake'
 ```
 
 **Snowflake** is also available through [Carthage](https://github.com/Carthage/Carthage).
