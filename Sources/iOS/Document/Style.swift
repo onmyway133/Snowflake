@@ -8,6 +8,7 @@ class Style {
   var fillRule: String?
   var lineCap: String?
   var lineJoin: String?
+  var miterLimit: CGFloat?
 
   init(attributes: JSONDictionary) {
     var attributes = attributes
@@ -23,6 +24,7 @@ class Style {
     self.fillRule = Style.parse(fillRule: attributes.string(key: "fill-rule"))
     self.lineCap = Style.parse(lineCap: attributes.string(key: "stroke-linecap"))
     self.lineJoin = Style.parse(lineJoin: attributes.string(key: "stroke-linejoin"))
+    self.miterLimit = attributes.number(key: "stroke-miterlimit")
   }
   
   static func parse(string: String) -> JSONDictionary {

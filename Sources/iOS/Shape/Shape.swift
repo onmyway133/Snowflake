@@ -50,6 +50,10 @@ public class Shape {
     if let lineJoin = style.lineJoin {
       layer.lineJoin = lineJoin
     }
+
+    if let miterLimit = style.miterLimit {
+      layer.miterLimit = miterLimit
+    }
     
     return layer
   }
