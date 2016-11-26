@@ -19,7 +19,7 @@ class SmoothCurveToCommand: Command {
     if let previousCommand = previousCommand as? CurveToCommand {
       switch previousCommand.kind {
       case .absolute:
-        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+        controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
       case .relative:
         let old = path.currentPoint.subtract(p: previousCommand.endPoint)
         controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
@@ -27,7 +27,7 @@ class SmoothCurveToCommand: Command {
     } else if let previousCommand = previousCommand as? SmoothCurveToCommand {
       switch previousCommand.kind {
       case .absolute:
-        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2)
+        controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
       case .relative:
         let old = path.currentPoint.subtract(p: previousCommand.endPoint)
         controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
