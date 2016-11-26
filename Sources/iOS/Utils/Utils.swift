@@ -17,11 +17,16 @@ struct Utils {
     var numbers = [CGFloat]()
 
     repeat {
-      scanner.scanFloat(&number)
-      numbers.append(CGFloat(number))
+      let result = scanner.scanFloat(&number)
+
+      if result {
+        numbers.append(CGFloat(number))
+      }
 
       if scanner.scanLocation < string.characters.count - 1 {
-        scanner.scanLocation += 1
+        if !result {
+          scanner.scanLocation += 1
+        }
       } else {
         break
       }
