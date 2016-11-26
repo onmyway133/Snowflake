@@ -16,6 +16,7 @@ class Text: Shape {
   override var layer: CALayer {
     let layer = CATextLayer()
     layer.string = text
+    layer.position = point
 
     return layer
   }
