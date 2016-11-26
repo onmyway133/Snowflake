@@ -30,8 +30,8 @@ public class SVG {
     self.groups = groups
   }
 
-  public var layers: [CAShapeLayer] {
-    var layers = [CAShapeLayer]()
+  public var layers: [CALayer] {
+    var layers = [CALayer]()
 
     groups.forEach { group in
       layers.append(contentsOf: group.layers)

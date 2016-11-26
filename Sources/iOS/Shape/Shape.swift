@@ -28,7 +28,7 @@ public class Shape {
   
   // MARK: Layer
   
-  var layer: CAShapeLayer {
+  var layer: CALayer {
     let layer = CAShapeLayer()
     layer.path = path?.cgPath
     

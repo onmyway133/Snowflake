@@ -19,7 +19,7 @@ public class Group {
     }
   }
 
-  public var layers: [CAShapeLayer] {
+  public var layers: [CALayer] {
     return shapes.map { shape in
       return shape.layer
     }
