@@ -12,13 +12,13 @@ struct Utils {
       return []
     }
 
-    var result: Float = 0
+    var number: Float = 0
     let scanner = Scanner(string: string)
     var numbers = [CGFloat]()
 
     repeat {
-      scanner.scanFloat(&result)
-      numbers.append(CGFloat(result))
+      scanner.scanFloat(&number)
+      numbers.append(CGFloat(number))
 
       if scanner.scanLocation < string.characters.count - 1 {
         scanner.scanLocation += 1
