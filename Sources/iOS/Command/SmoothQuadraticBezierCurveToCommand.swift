@@ -23,18 +23,18 @@ class SmoothQuadraticBezierCurveToCommand: Command {
         controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint, old: old)
       }
     } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {
-      controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint)
+      switch previousCommand.kind {
+      case .absolute:
+        controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint)
+      case .relative:
+        let old = path.currentPoint.subtract(p: previousCommand.endPoint)
+        controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint, old: old)
+      }
     } else {
       controlPoint = path.currentPoint
     }
 
-    switch kind {
-    case .absolute:
-      path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
-    case .relative:
-      path.addQuadCurve(to: path.currentPoint.add(p: endPoint),
-                        controlPoint: path.currentPoint.add(p: controlPoint))
-    }
+    path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
   }
 
 }

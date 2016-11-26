@@ -35,6 +35,8 @@
 		D2DAF17F1DE9C77600FEB677 /* path_t2.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2DAF17C1DE9C77600FEB677 /* path_t2.svg */; };
 		D2DAF1801DE9C77600FEB677 /* path_t3.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2DAF17D1DE9C77600FEB677 /* path_t3.svg */; };
 		D2DAF1811DE9C77600FEB677 /* path_t4.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2DAF17E1DE9C77600FEB677 /* path_t4.svg */; };
+		D2DAF1841DE9C97100FEB677 /* path_t5.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2DAF1821DE9C97100FEB677 /* path_t5.svg */; };
+		D2DAF1851DE9C97100FEB677 /* path_t6.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2DAF1831DE9C97100FEB677 /* path_t6.svg */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
@@ -72,6 +74,8 @@
 		D2DAF17C1DE9C77600FEB677 /* path_t2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t2.svg; sourceTree = "<group>"; };
 		D2DAF17D1DE9C77600FEB677 /* path_t3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t3.svg; sourceTree = "<group>"; };
 		D2DAF17E1DE9C77600FEB677 /* path_t4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t4.svg; sourceTree = "<group>"; };
+		D2DAF1821DE9C97100FEB677 /* path_t5.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t5.svg; sourceTree = "<group>"; };
+		D2DAF1831DE9C97100FEB677 /* path_t6.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t6.svg; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* SnowflakeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowflakeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		D5C7F7561C3BCA1E008CDDBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2DAF1821DE9C97100FEB677 /* path_t5.svg */,
+				D2DAF1831DE9C97100FEB677 /* path_t6.svg */,
 				D2DAF17C1DE9C77600FEB677 /* path_t2.svg */,
 				D2DAF17D1DE9C77600FEB677 /* path_t3.svg */,
 				D2DAF17E1DE9C77600FEB677 /* path_t4.svg */,
@@ -258,6 +264,7 @@
 				924D19BD1DCFC8EE00E18BB1 /* rectangle2.svg in Resources */,
 				D2DAF1801DE9C77600FEB677 /* path_t3.svg in Resources */,
 				D28A4DC01DE64F610009FBF8 /* path_a2.svg in Resources */,
+				D2DAF1851DE9C97100FEB677 /* path_t6.svg in Resources */,
 				D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */,
 				D226645B1DE4FFAC00DDAC1A /* path_a1.svg in Resources */,
 				D2DAF1771DE9B24400FEB677 /* shape_pencils.svg in Resources */,
@@ -280,6 +287,7 @@
 				924D19BC1DCFC8ED00E18BB1 /* rectangle1.svg in Resources */,
 				924D19A51DCFC42800E18BB1 /* christmas.svg in Resources */,
 				924D19B91DCFC80C00E18BB1 /* text2.svg in Resources */,
+				D2DAF1841DE9C97100FEB677 /* path_t5.svg in Resources */,
 				924D19A71DCFC42800E18BB1 /* snowflake.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
