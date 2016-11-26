@@ -7,7 +7,7 @@ struct Color {
       return color(hexString: name)
     } else if name.hasPrefix("rgb") {
       return color(rgbString: name)
-    } else if let hexString = mapping[name] {
+    } else if let hexString = colorList[name] {
       return color(hexString: hexString)
     } else {
       return UIColor.clear
@@ -50,17 +50,4 @@ struct Color {
       return UIColor.white
     }
   }
-  
-  // http://www.december.com/html/spec/colorsvghex.html
-  static let mapping: [String: String] = [
-    "black": "000000",
-    "white": "FFFFFF",
-    "red": "FF0000",
-    "green": "00FF00",
-    "blue": "0000FF",
-    "yellow": "FFFF00",
-    "pink": "FFC0CB",
-    "purple": "FF00FF",
-    "lime": "00FF00",
-  ]
 }
