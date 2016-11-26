@@ -13,11 +13,15 @@ class VerticalLineToCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    if kind == .relative {
-      y = path.currentPoint.y + y
+    let end: CGPoint
+
+    switch kind {
+    case .absolute:
+      end = CGPoint(x: path.currentPoint.x, y: y)
+    case .relative:
+      end = CGPoint(x: path.currentPoint.x, y: path.currentPoint.y + y)
     }
 
-    let end = CGPoint(x: 0, y: y)
     path.addLine(to: end)
   }
 }
