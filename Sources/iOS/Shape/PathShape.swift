@@ -1,13 +1,14 @@
 import UIKit
+import Reindeer
 
 class PathShape: Shape {
   
   let commands: [Command]
   
-  required init(attributes: JSONDictionary) {
-    self.commands = PathShape.parse(string: attributes.string(key: "d") ?? "")
+  required init(element: Element) {
+    self.commands = PathShape.parse(string: element.attributes.string(key: "d") ?? "")
     
-    super.init(attributes: attributes)
+    super.init(element: element)
     
     let path = UIBezierPath()
     self.commands.enumerated().forEach { (index, command) in

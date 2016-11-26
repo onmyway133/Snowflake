@@ -1,12 +1,13 @@
 import UIKit
+import Reindeer
 
 class Polyline: Shape {
   let points: [CGPoint]
   
-  required init(attributes: JSONDictionary) {
-    self.points = Utils.points(string: attributes.string(key: "points"))
+  required init(element: Element) {
+    self.points = Utils.points(string: element.attributes.string(key: "points"))
     
-    super.init(attributes: attributes)
+    super.init(element: element)
     
     self.path = UIBezierPath()
     if let first = self.points.first {

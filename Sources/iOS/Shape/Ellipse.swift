@@ -1,16 +1,17 @@
 import UIKit
+import Reindeer
 
 class Ellipse: Shape {
   let center: CGPoint
   let radius: CGPoint
   
-  required init(attributes: JSONDictionary) {
-    self.center = CGPoint(x: attributes.number(key: "cx") ?? 0,
-                          y: attributes.number(key: "cy") ?? 0)
-    self.radius = CGPoint(x: attributes.number(key: "rx") ?? 0,
-                          y: attributes.number(key: "ry") ?? 0)
+  required init(element: Element) {
+    self.center = CGPoint(x: element.attributes.number(key: "cx") ?? 0,
+                          y: element.attributes.number(key: "cy") ?? 0)
+    self.radius = CGPoint(x: element.attributes.number(key: "rx") ?? 0,
+                          y: element.attributes.number(key: "ry") ?? 0)
     
-    super.init(attributes: attributes)
+    super.init(element: element)
     
     self.path = UIBezierPath(ovalIn: rect)
   }

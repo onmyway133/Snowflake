@@ -1,14 +1,15 @@
 import UIKit
 import Reindeer
+import Reindeer
 
 public class Shape {
   let id: String
   let style: Style
   var path: UIBezierPath?
 
-  public required init(attributes: JSONDictionary) {
-    self.id = attributes.string(key: "id") ?? ""
-    self.style = Style(attributes: attributes)
+  public required init(element: Element) {
+    self.id = element.attributes.string(key: "id") ?? ""
+    self.style = Style(attributes: element.attributes)
   }
   
   static func make(element: Element) -> Shape? {
@@ -19,11 +20,12 @@ public class Shape {
       "polygon": Polygon.self,
       "polyline": Polyline.self,
       "rect": Rectangle.self,
-      "ellipse": Ellipse.self
+      "ellipse": Ellipse.self,
+      "text": Text.self
     ]
     
     let shape = mapping[element.name ?? ""]
-    return shape?.init(attributes: element.attributes)
+    return shape?.init(element: element)
   }
   
   // MARK: Layer
