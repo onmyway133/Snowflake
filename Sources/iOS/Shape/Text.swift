@@ -8,7 +8,7 @@ class Text: Shape {
   required init(element: Element) {
     self.point = CGPoint(x: element.attributes.number(key: "x") ?? 0,
                           y: element.attributes.number(key: "y") ?? 0)
-    self.text = element.attributes.string(key: "text") ?? ""
+    self.text = element.content ?? ""
 
     super.init(element: element)
   }
