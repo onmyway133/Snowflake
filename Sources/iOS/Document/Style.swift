@@ -6,7 +6,9 @@ class Style {
   var fillColor: UIColor?
   let opacity: CGFloat
   var fillRule: String?
-  
+  var lineCap: String?
+  var lineJoin: String?
+
   init(attributes: JSONDictionary) {
     var attributes = attributes
     
@@ -19,6 +21,8 @@ class Style {
     self.strokeColor = attributes.color(key: "stroke") ?? .black
     self.opacity = attributes.number(key: "opacity") ?? 1
     self.fillRule = Style.parse(fillRule: attributes.string(key: "fill-rule"))
+    self.lineCap = Style.parse(lineCap: attributes.string(key: "stroke-linecap"))
+    self.lineJoin = Style.parse(lineJoin: attributes.string(key: "stroke-linejoin"))
   }
   
   static func parse(string: String) -> JSONDictionary {
@@ -47,5 +51,25 @@ class Style {
     ]
     
     return mapping[fillRule]
+  }
+
+  static func parse(lineCap: String?) -> String? {
+    guard let lineCap = lineCap else { return nil }
+
+    if ["butt", "square", "round"].contains(lineCap) {
+      return lineCap
+    } else {
+      return nil
+    }
+  }
+
+  static func parse(lineJoin: String?) -> String? {
+    guard let lineJoin = lineJoin else { return nil }
+
+    if ["bevel", "miter", "round"].contains(lineJoin) {
+      return lineJoin
+    } else {
+      return nil
+    }
   }
 }

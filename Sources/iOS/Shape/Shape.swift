@@ -42,6 +42,14 @@ public class Shape {
     if let fillRule = style.fillRule {
       layer.fillRule = fillRule
     }
+
+    if let lineCap = style.lineCap {
+      layer.lineCap = lineCap
+    }
+
+    if let lineJoin = style.lineJoin {
+      layer.lineJoin = lineJoin
+    }
     
     return layer
   }
