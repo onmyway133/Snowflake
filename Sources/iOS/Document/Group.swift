@@ -4,24 +4,18 @@ import Reindeer
 public class Group {
 
   public let shapes: [Shape]
-  public let id: String
-
-  public init(shapes: [Shape]) {
-    self.id = ""
-    self.shapes = shapes
-  }
 
   public init(element: Element) {
-    self.id = element.attributes.string(key: "id") ?? ""
+    var shapes: [Shape] = []
 
-    self.shapes = element.children().flatMap {
-      return Shape.make(element: $0)
+    element.children().forEach {
+      if $0.name == "g" {
+        shapes.append(contentsOf: Group(element: $0).shapes)
+      } else if let shape = Shape.make(element: $0) {
+        shapes.append(shape)
+      }
     }
-  }
 
-  public var layers: [CALayer] {
-    return shapes.map { shape in
-      return shape.layer
-    }
+    self.shapes = shapes
   }
 }
