@@ -7,6 +7,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/Snowflake.svg?style=flat)](http://cocoadocs.org/docsets/Snowflake)
 ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
 
+![](Screenshots/Banner.png)
+
 ## Description
 
 **Snowflake** description.
