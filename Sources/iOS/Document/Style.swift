@@ -19,7 +19,7 @@ class Style {
     
     self.strokeWidth = attributes.number(key: "stroke-width") ?? 1
     self.fillColor = attributes.color(key: "fill")
-    self.strokeColor = attributes.color(key: "stroke") ?? .black
+    self.strokeColor = attributes.color(key: "stroke")
     self.opacity = attributes.number(key: "opacity") ?? 1
     self.fillRule = Style.parse(fillRule: attributes.string(key: "fill-rule"))
     self.lineCap = Style.parse(lineCap: attributes.string(key: "stroke-linecap"))
