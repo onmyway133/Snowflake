@@ -15,8 +15,6 @@ class SmoothQuadraticBezierCurveToCommand: Command {
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
     if let previousCommand = previousCommand as? QuadraticBezierCurveCommand {
-      controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint)
-    } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {
       switch previousCommand.kind {
       case .absolute:
         controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint)
@@ -24,6 +22,8 @@ class SmoothQuadraticBezierCurveToCommand: Command {
         let old = path.currentPoint.subtract(p: previousCommand.endPoint)
         controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint, old: old)
       }
+    } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {
+      controlPoint = path.currentPoint.reflect(point: previousCommand.controlPoint)
     } else {
       controlPoint = path.currentPoint
     }
