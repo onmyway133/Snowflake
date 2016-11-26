@@ -17,32 +17,19 @@ class SmoothCurveToCommand: Command {
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
     if let previousCommand = previousCommand as? CurveToCommand {
-      switch previousCommand.kind {
-      case .absolute:
-        controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
-      case .relative:
-        let old = path.currentPoint.subtract(p: previousCommand.endPoint)
-        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
-      }
+      controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
     } else if let previousCommand = previousCommand as? SmoothCurveToCommand {
-      switch previousCommand.kind {
-      case .absolute:
-        controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
-      case .relative:
-        let old = path.currentPoint.subtract(p: previousCommand.endPoint)
-        controlPoint1 = path.currentPoint.reflect(point: previousCommand.controlPoint2, old: old)
-      }
+      controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
     } else {
       controlPoint1 = path.currentPoint
     }
 
-    switch kind {
-    case .absolute:
-      path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
-    case .relative:
-      path.addCurve(to: path.currentPoint.add(p: endPoint),
-                    controlPoint1: path.currentPoint.add(p: controlPoint1),
-                    controlPoint2: path.currentPoint.add(p: controlPoint2))
+    if kind == .relative {
+      endPoint = path.currentPoint.add(p: endPoint)
+      controlPoint1 = path.currentPoint.add(p: controlPoint1)
+      controlPoint2 = path.currentPoint.add(p: controlPoint2)
     }
+
+    path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
   }
 }

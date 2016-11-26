@@ -17,13 +17,12 @@ class CurveToCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    switch kind {
-    case .absolute:
-      path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
-    case .relative:
-      path.addCurve(to: path.currentPoint.add(p: endPoint),
-                    controlPoint1: path.currentPoint.add(p: controlPoint1),
-                    controlPoint2: path.currentPoint.add(p: controlPoint2))
+    if kind == .relative {
+      endPoint = path.currentPoint.add(p: endPoint)
+      controlPoint1 = path.currentPoint.add(p: controlPoint1)
+      controlPoint2 = path.currentPoint.add(p: controlPoint2)
     }
+
+    path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
   }
 }

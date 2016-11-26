@@ -13,12 +13,10 @@ class LineToCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    switch kind {
-    case .absolute:
-      path.addLine(to: point)
-    case .relative:
-      let end = path.currentPoint.add(p: point)
-      path.addLine(to: end)
+    if kind == .relative {
+      point = path.currentPoint.add(p: point)
     }
+
+    path.addLine(to: point)
   }
 }

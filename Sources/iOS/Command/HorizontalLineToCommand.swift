@@ -13,13 +13,11 @@ class HorizontalLineToCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    switch kind {
-    case .absolute:
-      let end = CGPoint(x: x, y: 0)
-      path.addLine(to: end)
-    case .relative:
-      let end = path.currentPoint.add(p: CGPoint(x: x, y: 0))
-      path.addLine(to: end)
+    if kind == .relative {
+      x = path.currentPoint.x + x
     }
+
+    let end = CGPoint(x: x, y: 0)
+    path.addLine(to: end)
   }
 }

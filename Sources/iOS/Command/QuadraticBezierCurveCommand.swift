@@ -15,12 +15,11 @@ class QuadraticBezierCurveCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    switch kind {
-    case .absolute:
-      path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
-    case .relative:
-      path.addQuadCurve(to: path.currentPoint.add(p: endPoint),
-                        controlPoint: path.currentPoint.add(p: controlPoint))
+    if kind == .relative {
+      endPoint = path.currentPoint.add(p: endPoint)
+      controlPoint = path.currentPoint.add(p: controlPoint)
     }
+
+    path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
   }
 }

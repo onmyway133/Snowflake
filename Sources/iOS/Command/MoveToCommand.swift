@@ -13,13 +13,11 @@ class MoveToCommand: Command {
   }
 
   override func act(path: UIBezierPath, previousCommand: Command?) {
-    switch kind {
-    case .absolute:
-      path.move(to: point)
-    case .relative:
-      let end = path.currentPoint.add(p: point)
-      path.move(to: end)
+    if kind == .relative {
+      point = path.currentPoint.add(p: point)
     }
+
+    path.move(to: point)
   }
 }
 
