@@ -64,8 +64,15 @@ class ViewController: UIViewController {
     else { return }
 
     let svgView = document.svg.view
-    svgView.center = self.view.center
     self.view.addSubview(svgView)
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    self.view.subviews.forEach {
+      $0.center = self.view.center
+    }
   }
 }
 
