@@ -12,12 +12,23 @@ struct Utils {
       return []
     }
 
-    return string.trim()
-      .replacingOccurrences(of: ",", with: " ")
-      .replacingOccurrences(of: "  ", with: " ")
-      .components(separatedBy: " ").flatMap {
-        return number(string: $0)
+    var result: Float = 0
+    let scanner = Scanner(string: string)
+    var numbers = [CGFloat]()
+
+    repeat {
+      scanner.scanFloat(&result)
+      numbers.append(CGFloat(result))
+
+      if scanner.scanLocation < string.characters.count - 1 {
+        scanner.scanLocation += 1
+      } else {
+        break
       }
+
+    } while true
+
+    return numbers
   }
 
   static func isLowercase(string: String) -> Bool {
