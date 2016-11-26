@@ -34,7 +34,13 @@ class SmoothQuadraticBezierCurveToCommand: Command {
       controlPoint = path.currentPoint
     }
 
-    path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+    switch kind {
+    case .absolute:
+      path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+    case .relative:
+      path.addQuadCurve(to: path.currentPoint.add(p: endPoint),
+                        controlPoint: path.currentPoint.add(p: controlPoint))
+    }
   }
 
 }

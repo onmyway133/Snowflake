@@ -36,6 +36,13 @@ class SmoothCurveToCommand: Command {
       controlPoint1 = path.currentPoint
     }
 
-    path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+    switch kind {
+    case .absolute:
+      path.addCurve(to: endPoint, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+    case .relative:
+      path.addCurve(to: path.currentPoint.add(p: endPoint),
+                    controlPoint1: path.currentPoint.add(p: controlPoint1),
+                    controlPoint2: path.currentPoint.add(p: controlPoint2))
+    }
   }
 }
