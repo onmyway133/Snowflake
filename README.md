@@ -27,6 +27,21 @@ guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
 let _ = document.svg.view
 ```
 
+### Shapes
+
+### Style
+
+### Animation
+
+<div align = "center">
+<img src="Screenshots/animation.gif" />
+<br>
+</div>
+
+### Scale
+
+### Pattern
+
 ## Installation
 
 **Snowflake** is available through [CocoaPods](http://cocoapods.org). To install
