@@ -50,7 +50,7 @@ The `Shape` object maps to SVG elements
 - text: `Text`
 - image: `Image`
 
-`PathShape` handle list of commands through `Command` object
+`PathShape` handles list of commands through `Command` object
 
 ### Style
 
