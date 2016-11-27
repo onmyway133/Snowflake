@@ -54,17 +54,22 @@ let view = document.svg.view
 ### Style
 
 - The `Style` object encapsulates style information
+	
+<div align = "center">
+<img src="Screenshots/style.png" />
+<br>
+</div>
 
 - Inner style
 
 ```xml
-<path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+<polygon points="100,10 40,198 190,78 10,78 160,198" fill="lime" stroke="purple" stroke-width="5" fill-rule="evenodd" />
 ```
 
 - Style attribute
 
 ```xml
-<path d="M 100 350 q 150 -300 300 0" style="fill:#3d7dab;fill-opacity:1;stroke:red;stroke-width:2" />
+<polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
 ```
 
 ### Animation
