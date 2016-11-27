@@ -64,11 +64,6 @@ class ViewController: UIViewController {
     else { return }
 
     let svgView = document.svg.view
-    let animator = Animator()
-    if let layer = svgView.layer.sublayers?.first as? CAShapeLayer {
-      animator.animate(layer: layer)
-    }
-
     self.view.addSubview(svgView)
   }
 

@@ -74,7 +74,7 @@ let view = document.svg.view
 
 ### Animation
 
-- The cool thing about CALayer is that most of its properties are animatable
+- The cool thing about `CALayer` is that most of its properties are animatable
 
 ```swift
 let layer = PathShape().layer
