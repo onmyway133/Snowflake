@@ -1,23 +1,23 @@
 import Foundation
 
-class Command {
+public class Command {
 
-  enum Kind {
+  public enum Kind {
     case absolute, relative
   }
 
-  let kind: Kind
+  public let kind: Kind
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     self.kind = kind
   }
 
-  func act(path: UIBezierPath, previousCommand: Command?) {
+  public func act(path: UIBezierPath, previousCommand: Command?) {
     
   }
 }
 
-extension Command {
+public extension Command {
   class func make(initial: String, string: String) -> Command? {
     let type: Command.Type? = availableCommands[initial.uppercased()]
     let kind: Kind = Utils.isLowercase(string: initial) ? .relative : .absolute

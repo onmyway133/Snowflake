@@ -1,11 +1,11 @@
 import UIKit
 import Reindeer
 
-class PathShape: Shape {
+public class PathShape: Shape {
   
-  let commands: [Command]
+  public let commands: [Command]
   
-  required init(element: Element) {
+  public required init(element: Element) {
     self.commands = PathShape.parse(string: element.attributes.string(key: "d") ?? "")
     
     super.init(element: element)

@@ -1,13 +1,13 @@
 import UIKit
 import Reindeer
 
-class Image: Shape {
+public class Image: Shape {
 
-  required init(element: Element) {
+  public required init(element: Element) {
     super.init(element: element)
   }
 
-  override var layer: CALayer {
+  public override var layer: CALayer {
     let layer = CATextLayer()
 
     return layer

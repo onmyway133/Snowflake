@@ -3,9 +3,9 @@ import Reindeer
 import Reindeer
 
 public class Shape {
-  let id: String
-  let style: Style
-  var path: UIBezierPath?
+  public let id: String
+  public let style: Style
+  public var path: UIBezierPath?
 
   public required init(element: Element) {
     self.id = element.attributes.string(key: "id") ?? ""

@@ -1,16 +1,16 @@
 import Foundation
 
-class Style {
-  var strokeColor: UIColor?
-  let strokeWidth: CGFloat
-  var fillColor: UIColor?
-  let opacity: CGFloat
-  var fillRule: String?
-  var lineCap: String?
-  var lineJoin: String?
-  var miterLimit: CGFloat?
+public class Style {
+  public var strokeColor: UIColor?
+  public let strokeWidth: CGFloat
+  public var fillColor: UIColor?
+  public let opacity: CGFloat
+  public var fillRule: String?
+  public var lineCap: String?
+  public var lineJoin: String?
+  public var miterLimit: CGFloat?
 
-  init(attributes: JSONDictionary) {
+  public init(attributes: JSONDictionary) {
     var attributes = attributes
     
     if let string = attributes.string(key: "style") {

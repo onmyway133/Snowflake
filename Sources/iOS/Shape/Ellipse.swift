@@ -1,11 +1,11 @@
 import UIKit
 import Reindeer
 
-class Ellipse: Shape {
-  let center: CGPoint
-  let radius: CGPoint
+public class Ellipse: Shape {
+  public let center: CGPoint
+  public let radius: CGPoint
   
-  required init(element: Element) {
+  public required init(element: Element) {
     self.center = CGPoint(x: element.attributes.number(key: "cx") ?? 0,
                           y: element.attributes.number(key: "cy") ?? 0)
     self.radius = CGPoint(x: element.attributes.number(key: "rx") ?? 0,

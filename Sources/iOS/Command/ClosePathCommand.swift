@@ -1,12 +1,12 @@
 import Foundation
 
-class ClosePathCommand: Command {
+public class ClosePathCommand: Command {
 
   convenience init() {
     self.init(string: "", kind: .absolute)
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     path.close()
   }
 }

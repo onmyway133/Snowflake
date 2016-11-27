@@ -1,9 +1,9 @@
 import Foundation
 
-class MoveToCommand: Command {
-  var point: CGPoint = .zero
+public class MoveToCommand: Command {
+  public var point: CGPoint = .zero
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -12,7 +12,7 @@ class MoveToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     if kind == .relative {
       point = path.currentPoint.add(p: point)
     }

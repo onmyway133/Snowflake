@@ -1,11 +1,11 @@
 import UIKit
 import Reindeer
 
-class Rectangle: Shape {
-  let frame: CGRect
-  let cornerRadius: CGPoint
+public class Rectangle: Shape {
+  public let frame: CGRect
+  public let cornerRadius: CGPoint
 
-  required init(element: Element) {
+  public required init(element: Element) {
     self.frame = CGRect(x: element.attributes.number(key: "x") ?? 0,
                         y: element.attributes.number(key: "y") ?? 0,
                         width: element.attributes.number(key: "width") ?? 0,

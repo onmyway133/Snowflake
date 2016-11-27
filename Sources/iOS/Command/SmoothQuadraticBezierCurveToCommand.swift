@@ -1,10 +1,10 @@
 import Foundation
 
-class SmoothQuadraticBezierCurveToCommand: Command {
-  var controlPoint: CGPoint = .zero
-  var endPoint: CGPoint = .zero
+public class SmoothQuadraticBezierCurveToCommand: Command {
+  public var controlPoint: CGPoint = .zero
+  public var endPoint: CGPoint = .zero
 
-  required init(string: String, kind: Kind) {
+  required public init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -13,7 +13,7 @@ class SmoothQuadraticBezierCurveToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     if let previousCommand = previousCommand as? QuadraticBezierCurveCommand {
       controlPoint = previousCommand.controlPoint.reflect(around: path.currentPoint)
     } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {

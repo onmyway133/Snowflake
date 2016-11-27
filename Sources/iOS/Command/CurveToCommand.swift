@@ -1,11 +1,11 @@
 import Foundation
 
-class CurveToCommand: Command {
-  var controlPoint1: CGPoint = .zero
-  var controlPoint2: CGPoint = .zero
-  var endPoint: CGPoint = .zero
+public class CurveToCommand: Command {
+  public var controlPoint1: CGPoint = .zero
+  public var controlPoint2: CGPoint = .zero
+  public var endPoint: CGPoint = .zero
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -16,7 +16,7 @@ class CurveToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     if kind == .relative {
       endPoint = path.currentPoint.add(p: endPoint)
       controlPoint1 = path.currentPoint.add(p: controlPoint1)

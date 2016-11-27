@@ -1,10 +1,10 @@
 import UIKit
 import Reindeer
 
-class Polygon: Shape {
-  var points: [CGPoint] = []
+public class Polygon: Shape {
+  public var points: [CGPoint] = []
   
-  required init(element: Element) {
+  public required init(element: Element) {
     self.points = Utils.points(string: element.attributes.string(key: "points"))
     
     super.init(element: element)

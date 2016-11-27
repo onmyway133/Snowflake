@@ -1,10 +1,10 @@
 import UIKit
 import Reindeer
 
-class Polyline: Shape {
-  let points: [CGPoint]
+public class Polyline: Shape {
+  public let points: [CGPoint]
   
-  required init(element: Element) {
+  public required init(element: Element) {
     self.points = Utils.points(string: element.attributes.string(key: "points"))
     
     super.init(element: element)

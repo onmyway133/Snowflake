@@ -1,13 +1,13 @@
 import Foundation
 
-class EllipticalArcCommand: Command {
-  var radius: CGPoint = .zero
-  var rotation: CGFloat = 0
-  var largeArcFlag: Bool = false
-  var sweepFlag: Bool = false
-  var endPoint: CGPoint = .zero
+public class EllipticalArcCommand: Command {
+  public var radius: CGPoint = .zero
+  public var rotation: CGFloat = 0
+  public var largeArcFlag: Bool = false
+  public var sweepFlag: Bool = false
+  public var endPoint: CGPoint = .zero
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -20,7 +20,7 @@ class EllipticalArcCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     switch kind {
     case .absolute:
       break

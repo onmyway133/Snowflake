@@ -1,11 +1,11 @@
 import Foundation
 
-class SmoothCurveToCommand: Command {
-  var controlPoint1: CGPoint = .zero
-  var controlPoint2: CGPoint = .zero
-  var endPoint: CGPoint = .zero
+public class SmoothCurveToCommand: Command {
+  public var controlPoint1: CGPoint = .zero
+  public var controlPoint2: CGPoint = .zero
+  public var endPoint: CGPoint = .zero
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -15,7 +15,7 @@ class SmoothCurveToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     if let previousCommand = previousCommand as? CurveToCommand {
       controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
     } else if let previousCommand = previousCommand as? SmoothCurveToCommand {

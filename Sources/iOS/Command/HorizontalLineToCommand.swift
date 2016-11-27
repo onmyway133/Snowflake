@@ -1,9 +1,9 @@
 import Foundation
 
-class HorizontalLineToCommand: Command {
-  var x: CGFloat = 0
+public class HorizontalLineToCommand: Command {
+  public var x: CGFloat = 0
 
-  required init(string: String, kind: Kind) {
+  public required init(string: String, kind: Kind) {
     super.init(string: string, kind: kind)
 
     let numbers = Utils.numbers(string: string)
@@ -12,7 +12,7 @@ class HorizontalLineToCommand: Command {
     }
   }
 
-  override func act(path: UIBezierPath, previousCommand: Command?) {
+  public override func act(path: UIBezierPath, previousCommand: Command?) {
     let end: CGPoint
 
     switch kind {
