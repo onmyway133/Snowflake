@@ -18,20 +18,65 @@
 
 ### Document
 
+Create a `Document` with SVG `Data`
+
 ```swift
 guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
   let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
    let document = Snowflake.Document(data: data)
  else { return }
 
-let _ = document.svg.view
+let view = document.svg.view
 ```
+
+The flow is `SVG element` -> `Shape` -> `CALayer`
 
 ### Shapes
 
+<div align = "center">
+<img src="Screenshots/snowflake.png" height="200" width="200" />
+<br>
+</div>
+
+The `Shape` object maps to SVG elements
+
+- path: `PathShape`
+- circle: `Circle`
+- line: `Line`
+- polygon: `Polygon`
+- polyline: `Polyline`
+- rect: `Rectangle`
+- ellipse: `Ellipse`
+- text: `Text`
+- image: `Image`
+
+`PathShape` handle list of commands through `Command` object
+
 ### Style
 
+The `Style` object encapsulates style information
+
+- Inner style
+
+```xml
+<path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+```
+
+- Style attribute
+
+```xml
+<path d="M 100 350 q 150 -300 300 0" style="fill:#3d7dab;fill-opacity:1;stroke:red;stroke-width:2" />
+```
+
 ### Animation
+
+- Animate layers
+
+```swift
+let layer = PathShape().layer
+let animator = Animator()
+animator.animate(layer: layer)
+```
 
 <div align = "center">
 <img src="Screenshots/animation.gif" />
