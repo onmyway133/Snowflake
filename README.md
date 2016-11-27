@@ -18,7 +18,7 @@
 
 ### Document
 
-Create a `Document` with SVG `Data`
+- Create a `Document` with SVG `Data`
 
 ```swift
 guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
@@ -29,7 +29,7 @@ guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
 let view = document.svg.view
 ```
 
-The flow is `SVG element` -> `Shape` -> `CALayer`
+- The flow is `SVG element` -> `Shape` -> `CALayer`
 
 ### Shapes
 
@@ -38,23 +38,22 @@ The flow is `SVG element` -> `Shape` -> `CALayer`
 <br>
 </div>
 
-The `Shape` object maps to SVG elements
+- The `Shape` object maps to SVG elements
+	- path: `PathShape`
+	- circle: `Circle`
+	- line: `Line`
+	- polygon: `Polygon`
+	- polyline: `Polyline`
+	- rect: `Rectangle`
+	- ellipse: `Ellipse`
+	- text: `Text`
+	- image: `Image`
 
-- path: `PathShape`
-- circle: `Circle`
-- line: `Line`
-- polygon: `Polygon`
-- polyline: `Polyline`
-- rect: `Rectangle`
-- ellipse: `Ellipse`
-- text: `Text`
-- image: `Image`
-
-`PathShape` handles list of commands through `Command` object
+- `PathShape` handles list of commands through `Command` object
 
 ### Style
 
-The `Style` object encapsulates style information
+- The `Style` object encapsulates style information
 
 - Inner style
 
@@ -70,7 +69,7 @@ The `Style` object encapsulates style information
 
 ### Animation
 
-- Animate layers
+- The cool thing about CALayer is that most of its properties are animatable
 
 ```swift
 let layer = PathShape().layer
@@ -85,7 +84,11 @@ animator.animate(layer: layer)
 
 ### Scale
 
+- TBD
+
 ### Pattern
+
+- TBD
 
 ## Installation
 
