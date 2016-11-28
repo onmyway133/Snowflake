@@ -5,10 +5,10 @@ public class Path: Shape {
   
   public let commands: [Command]
   
-  public required init(element: Element) {
-    self.commands = Path.parse(string: element.attributes.string(key: "d") ?? "")
+  public required init(attributes: JSONDictionary) {
+    self.commands = Path.parse(string: attributes.string(key: "d") ?? "")
     
-    super.init(element: element)
+    super.init(attributes: attributes)
     
     let path = UIBezierPath()
     self.commands.enumerated().forEach { (index, command) in

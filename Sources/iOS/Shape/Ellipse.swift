@@ -5,13 +5,13 @@ public class Ellipse: Shape {
   public let center: CGPoint
   public let radius: CGPoint
   
-  public required init(element: Element) {
-    self.center = CGPoint(x: element.attributes.number(key: "cx") ?? 0,
-                          y: element.attributes.number(key: "cy") ?? 0)
-    self.radius = CGPoint(x: element.attributes.number(key: "rx") ?? 0,
-                          y: element.attributes.number(key: "ry") ?? 0)
+  public required init(attributes: JSONDictionary) {
+    self.center = CGPoint(x: attributes.number(key: "cx") ?? 0,
+                          y: attributes.number(key: "cy") ?? 0)
+    self.radius = CGPoint(x: attributes.number(key: "rx") ?? 0,
+                          y: attributes.number(key: "ry") ?? 0)
     
-    super.init(element: element)
+    super.init(attributes: attributes)
     
     self.path = UIBezierPath(ovalIn: rect)
   }

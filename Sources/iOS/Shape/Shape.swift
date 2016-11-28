@@ -7,9 +7,9 @@ public class Shape {
   public let style: Style
   public var path: UIBezierPath?
 
-  public required init(element: Element) {
-    self.id = element.attributes.string(key: "id") ?? ""
-    self.style = Style(attributes: element.attributes)
+  public required init(attributes: JSONDictionary) {
+    self.id = attributes.string(key: "id") ?? ""
+    self.style = Style(attributes: attributes)
   }
   
   static func make(element: Element) -> Shape? {
@@ -24,9 +24,12 @@ public class Shape {
       "text": Text.self,
       "image": Image.self
     ]
+
+    var attributes = element.attributes
+    attributes["name"] = element.name
     
     let shape = mapping[element.name ?? ""]
-    return shape?.init(element: element)
+    return shape?.init(attributes: attributes)
   }
   
   // MARK: Layer

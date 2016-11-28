@@ -5,12 +5,12 @@ public class Circle: Shape {
   public let center: CGPoint
   public let radius: CGFloat
   
-  required public init(element: Element) {
-    self.center = CGPoint(x: element.attributes.number(key: "cx") ?? 0,
-                          y: element.attributes.number(key: "cy") ?? 0)
-    self.radius = element.attributes.number(key: "r") ?? 0
+  required public init(attributes: JSONDictionary) {
+    self.center = CGPoint(x: attributes.number(key: "cx") ?? 0,
+                          y: attributes.number(key: "cy") ?? 0)
+    self.radius = attributes.number(key: "r") ?? 0
     
-    super.init(element: element)
+    super.init(attributes: attributes)
     
     self.path = UIBezierPath(arcCenter: center, radius: radius,
                         startAngle: 0, endAngle: CGFloat.pi * CGFloat(2),

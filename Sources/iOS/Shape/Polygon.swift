@@ -4,10 +4,10 @@ import Reindeer
 public class Polygon: Shape {
   public var points: [CGPoint] = []
   
-  public required init(element: Element) {
-    self.points = Utils.points(string: element.attributes.string(key: "points"))
+  public required init(attributes: JSONDictionary) {
+    self.points = Utils.points(string: attributes.string(key: "points"))
     
-    super.init(element: element)
+    super.init(attributes: attributes)
     
     self.path = UIBezierPath()
     if let first = self.points.first {
