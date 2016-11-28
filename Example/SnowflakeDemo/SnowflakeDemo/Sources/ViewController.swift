@@ -52,6 +52,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.white
+
+    edgesForExtendedLayout = []
+    navigationController?.navigationBar.isTranslucent = false
     
     title = item
     load()
@@ -71,7 +74,7 @@ class ViewController: UIViewController {
     super.viewDidLayoutSubviews()
 
     self.view.subviews.forEach {
-      $0.center = self.view.center
+      $0.frame = view.bounds
     }
   }
 }
