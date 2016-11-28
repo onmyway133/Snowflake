@@ -14,7 +14,7 @@ public class Shape {
   
   static func make(element: Element) -> Shape? {
     let mapping: [String: Shape.Type] = [
-      "path": PathShape.self,
+      "path": Path.self,
       "circle": Circle.self,
       "line": Line.self,
       "polygon": Polygon.self,

@@ -39,7 +39,7 @@ let view = document.svg.view
 </div>
 
 - The `Shape` object maps to SVG elements
-	- path: `PathShape`
+	- path: `Path`
 	- circle: `Circle`
 	- line: `Line`
 	- polygon: `Polygon`
