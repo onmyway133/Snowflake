@@ -21,12 +21,17 @@
 - Create a `Document` with SVG `Data`
 
 ```swift
-guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
+guard let path = Bundle.main.path(forResource: "snowflake", ofType: "svg"),
   let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
    let document = Snowflake.Document(data: data)
  else { return }
 
 let view = document.svg.view
+
+<div align = "center">
+<img src="Screenshots/snowflake.png" height="200" width="200" />
+<br>
+</div>
 ```
 
 - The flow is `SVG element` -> `Shape` -> `CALayer`
@@ -50,11 +55,6 @@ let layer = path.layer
 </div>
 
 ### Shapes
-
-<div align = "center">
-<img src="Screenshots/snowflake.png" height="200" width="200" />
-<br>
-</div>
 
 - The `Shape` object maps to SVG elements
 	- path: `Path`
