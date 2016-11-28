@@ -21,7 +21,7 @@
 - Create a `Document` with SVG `Data`
 
 ```swift
-guard let path = Bundle.main.path(forResource: "snowflake", ofType: "svg"),
+guard let path = Bundle.main.path(forResource: "xmas", ofType: "svg"),
   let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
    let document = Snowflake.Document(data: data)
  else { return }
@@ -30,7 +30,7 @@ let view = document.svg.view
 ```
 
 <div align = "center">
-<img src="Screenshots/snowflake.png" height="200" width="200" />
+<img src="Screenshots/xmas.png" height="425" width="197" />
 <br>
 </div>
 
