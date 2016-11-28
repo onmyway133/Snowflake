@@ -67,7 +67,7 @@ let layer = path.layer
 	- text: `Text`
 	- image: `Image`
 
-- `PathShape` handles list of commands through `Command` object
+- `Path` handles list of commands through `Command` object
 
 ### Style
 
