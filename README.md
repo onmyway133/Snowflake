@@ -30,7 +30,7 @@ let view = document.svg.view
 ```
 
 <div align = "center">
-<img src="Screenshots/xmas.png" height="425" width="197" />
+<img src="Screenshots/xmas.png" width="425" height="197" />
 <br>
 </div>
 
