@@ -67,7 +67,6 @@ class ViewController: UIViewController {
     else { return }
 
     let svgView = document.svg.view
-    svgView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     self.view.addSubview(svgView)
   }
 
