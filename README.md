@@ -27,12 +27,12 @@ guard let path = Bundle.main.path(forResource: "snowflake", ofType: "svg"),
  else { return }
 
 let view = document.svg.view
+```
 
 <div align = "center">
 <img src="Screenshots/snowflake.png" height="200" width="200" />
 <br>
 </div>
-```
 
 - The flow is `SVG element` -> `Shape` -> `CALayer`
 - Make `Shape` from attributes
