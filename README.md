@@ -95,7 +95,7 @@ let layer = path.layer
 - The cool thing about `CALayer` is that most of its properties are animatable
 
 ```swift
-let layer = PathShape(attributes: attributes).layer
+let layer = Path(attributes: attributes).layer
 let animator = Animator()
 animator.animate(layer: layer)
 ```
