@@ -106,9 +106,14 @@ let style = Style(attributes: attributes)
 - The cool thing about `CALayer` is that most of its properties are animatable
 
 ```swift
-let layer = Path(attributes: attributes).layer
-let animator = Animator()
-animator.animate(layer: layer)
+(svgView.layer.sublayers as? [CAShapeLayer])?.forEach { layer in
+  let stroke = CABasicAnimation(keyPath: "strokeEnd")
+  stroke.fromValue = 0
+  stroke.toValue = 1
+  stroke.duration = 3
+
+  layer.add(stroke, forKey: nil)
+}
 ```
 
 <div align = "center">
