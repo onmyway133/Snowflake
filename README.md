@@ -141,6 +141,14 @@ let layers = document.svg.layers(size: CGSize(width: 200, height: 100))
 let view = document.svg.view(size: CGSize(width: 100, height: 100))
 ```
 
+### Text
+
+- TBD
+
+### Image
+
+- TBD
+
 ### Pattern
 
 - TBD
