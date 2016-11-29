@@ -13,7 +13,7 @@ public class Text: Item {
     super.init(attributes: attributes)
   }
 
-  public override var layer: CALayer {
+  public var layer: CATextLayer {
     let layer = CATextLayer()
     layer.string = text
     layer.position = point

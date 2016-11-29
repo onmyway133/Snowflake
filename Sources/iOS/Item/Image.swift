@@ -7,7 +7,7 @@ public class Image: Item {
     super.init(attributes: attributes)
   }
 
-  public override var layer: CALayer {
+  public var layer: CALayer {
     let layer = CATextLayer()
 
     return layer

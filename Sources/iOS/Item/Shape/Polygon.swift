@@ -2,6 +2,8 @@ import UIKit
 import Reindeer
 
 public class Polygon: Item {
+
+  public var path: UIBezierPath!
   public var points: [CGPoint] = []
   
   public required init(attributes: JSONDictionary) {

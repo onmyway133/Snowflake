@@ -5,7 +5,6 @@ import Reindeer
 public class Item {
   public let id: String
   public let style: Style
-  public var path: UIBezierPath?
 
   public required init(attributes: JSONDictionary) {
     self.id = attributes.string(key: "id") ?? ""
@@ -30,35 +29,5 @@ public class Item {
     
     let shape = mapping[element.name ?? ""]
     return shape?.init(attributes: attributes)
-  }
-  
-  // MARK: Layer
-  
-  var layer: CALayer {
-    let layer = CAShapeLayer()
-    layer.path = path?.cgPath
-    
-    layer.strokeColor = style.strokeColor?.cgColor
-    layer.lineWidth = style.strokeWidth
-    layer.fillColor = style.fillColor?.cgColor
-    layer.opacity = Float(style.opacity)
-    
-    if let fillRule = style.fillRule {
-      layer.fillRule = fillRule
-    }
-
-    if let lineCap = style.lineCap {
-      layer.lineCap = lineCap
-    }
-
-    if let lineJoin = style.lineJoin {
-      layer.lineJoin = lineJoin
-    }
-
-    if let miterLimit = style.miterLimit {
-      layer.miterLimit = miterLimit
-    }
-    
-    return layer
   }
 }

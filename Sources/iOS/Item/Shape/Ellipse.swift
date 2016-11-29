@@ -2,6 +2,8 @@ import UIKit
 import Reindeer
 
 public class Ellipse: Item {
+  
+  public var path: UIBezierPath!
   public let center: CGPoint
   public let radius: CGPoint
   

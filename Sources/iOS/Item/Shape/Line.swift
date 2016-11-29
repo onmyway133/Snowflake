@@ -2,6 +2,8 @@ import UIKit
 import Reindeer
 
 public class Line: Item {
+
+  public var path: UIBezierPath!
   public let point1: CGPoint
   public let point2: CGPoint
   

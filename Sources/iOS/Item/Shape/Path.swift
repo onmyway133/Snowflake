@@ -2,7 +2,8 @@ import UIKit
 import Reindeer
 
 public class Path: Item {
-  
+
+  public var path: UIBezierPath!
   public let commands: [Command]
   
   public required init(attributes: JSONDictionary) {

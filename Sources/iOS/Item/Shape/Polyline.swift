@@ -2,6 +2,8 @@ import UIKit
 import Reindeer
 
 public class Polyline: Item {
+
+  public var path: UIBezierPath!
   public let points: [CGPoint]
   
   public required init(attributes: JSONDictionary) {

@@ -14,9 +14,7 @@ public class SVG {
   }
 
   public var layers: [CALayer] {
-    return items.map {
-      return $0.layer
-    }
+    return []
   }
 
   public var view: UIView {

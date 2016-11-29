@@ -1,7 +1,9 @@
 import UIKit
 import Reindeer
 
-public class Circle: Item {
+public class Circle: Item, ShapeAware {
+  
+  public var path: UIBezierPath!
   public let center: CGPoint
   public let radius: CGFloat
   
