@@ -72,11 +72,17 @@ let layer = path.layer
 ### Style
 
 - The `Style` object encapsulates style information
-	
-<div align = "center">
-<img src="Screenshots/style.png" />
-<br>
-</div>
+
+```swift
+let attributes: [String: Any] = [
+  "fill": "lime",
+  "stroke": "purple",
+  "stroke-width": "5",
+  "fill-rule": "evenodd"
+]
+
+let style = Style(attributes: attributes)
+```
 
 - Inner style
 
@@ -89,6 +95,11 @@ let layer = path.layer
 ```xml
 <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
 ```
+
+<div align = "center">
+<img src="Screenshots/style.png" />
+<br>
+</div>
 
 ### Animation
 
