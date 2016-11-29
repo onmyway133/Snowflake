@@ -34,7 +34,7 @@ let view = document.svg.view
 <br>
 </div>
 
-- The flow is `SVG element` -> `Shape` -> `CALayer`
+- The flow is `SVG element` -> `Shape` -> `UIBezierPath` -> `CALayer`
 - Make `Shape` from attributes
 
 ```swift
