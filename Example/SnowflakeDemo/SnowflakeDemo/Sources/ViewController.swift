@@ -66,7 +66,7 @@ class ViewController: UIViewController {
       let document = Snowflake.Document(data: data)
     else { return }
 
-    let svgView = document.svg.view(size: CGSize(width: 300, height: 200))
+    let svgView = document.svg.view(size: CGSize(width: 100, height: 100))
     self.view.addSubview(svgView)
   }
 

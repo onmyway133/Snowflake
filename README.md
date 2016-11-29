@@ -26,7 +26,7 @@ guard let path = Bundle.main.path(forResource: "xmas", ofType: "svg"),
    let document = Snowflake.Document(data: data)
  else { return }
 
-let view = document.svg.view
+let view = document.svg.view(size: CGSize(width: 100, height: 100))
 ```
 
 <div align = "center">
@@ -123,7 +123,23 @@ let style = Style(attributes: attributes)
 
 ### Scale
 
-- TBD
+- Get bounding rectangle of the SVG shapes
+
+```swift
+let bounds = document.size.bounds()
+```
+
+- Scale layers to a given size
+
+```swift
+let layers = document.svg.layers(size: CGSize(width: 200, height: 100))
+```
+
+- Scale view to a given size
+
+```swift
+let view = document.svg.view(size: CGSize(width: 100, height: 100))
+```
 
 ### Pattern
 
