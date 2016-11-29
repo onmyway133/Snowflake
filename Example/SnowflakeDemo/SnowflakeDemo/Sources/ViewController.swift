@@ -66,17 +66,15 @@ class ViewController: UIViewController {
       let document = Snowflake.Document(data: data)
     else { return }
 
-    let svgView = document.svg.view
+    let svgView = document.svg.view(size: CGSize(width: 300, height: 200))
     self.view.addSubview(svgView)
-
-    print(document.svg.bounds())
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     self.view.subviews.forEach {
-      $0.frame = view.bounds
+      $0.center = view.center
     }
   }
 }

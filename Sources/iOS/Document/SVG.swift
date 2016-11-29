@@ -12,22 +12,6 @@ public class SVG {
 
     self.items = Group(element: element).items
   }
-
-  public var layers: [CALayer] {
-    return []
-  }
-
-  public var view: UIView {
-    let view = UIView()
-
-    layers.forEach { layer in
-      view.layer.addSublayer(layer)
-    }
-
-    view.frame.size = size
-
-    return view
-  }
 }
 
 public extension SVG {
@@ -44,7 +28,36 @@ public extension SVG {
     return rect
   }
 
+  func view(size: CGSize) -> UIView {
+    let view = UIView()
+    view.frame.size = size
+
+    for layer in layers(size: size) {
+      view.layer.addSublayer(layer)
+    }
+
+    return view
+  }
+
   func layers(size: CGSize) -> [CALayer] {
-    return []
+    var layers = [CALayer]()
+    let ratio = Utils.ratio(from: bounds().size, to: size)
+
+    for item in items {
+      if let item = item as? ShapeAware {
+        let layer = item.layer()
+
+        if let cgPath = layer.path {
+          let path = UIBezierPath(cgPath: cgPath)
+          path.apply(CGAffineTransform(scaleX: ratio, y: ratio))
+
+          layer.path = path.cgPath
+        }
+
+        layers.append(layer)
+      }
+    }
+
+    return layers
   }
 }
