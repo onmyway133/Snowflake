@@ -126,7 +126,7 @@ let style = Style(attributes: attributes)
 - Get bounding rectangle of the SVG shapes
 
 ```swift
-let bounds = document.size.bounds()
+let bounds = document.svg.bounds()
 ```
 
 - Scale layers to a given size
