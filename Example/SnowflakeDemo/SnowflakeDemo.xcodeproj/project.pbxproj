@@ -28,6 +28,7 @@
 		924D19CF1DCFE49F00E18BB1 /* polyline2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 924D19CD1DCFE49F00E18BB1 /* polyline2.svg */; };
 		D226645B1DE4FFAC00DDAC1A /* path_a1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D226645A1DE4FFAC00DDAC1A /* path_a1.svg */; };
 		D26992CB1DEE36BA00A9B298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26992CA1DEE36BA00A9B298 /* Main.storyboard */; };
+		D26992CD1DEE373E00A9B298 /* ScaleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26992CC1DEE373E00A9B298 /* ScaleController.swift */; };
 		D28A4DC01DE64F610009FBF8 /* path_a2.svg in Resources */ = {isa = PBXBuildFile; fileRef = D28A4DBF1DE64F610009FBF8 /* path_a2.svg */; };
 		D2B98C441DE77BAF009D518A /* path_s1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2B98C421DE77BAF009D518A /* path_s1.svg */; };
 		D2B98C451DE77BAF009D518A /* path_t1.svg in Resources */ = {isa = PBXBuildFile; fileRef = D2B98C431DE77BAF009D518A /* path_t1.svg */; };
@@ -72,6 +73,7 @@
 		C79D1D44812598EEB13F6D2D /* Pods_SnowflakeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowflakeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D226645A1DE4FFAC00DDAC1A /* path_a1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path_a1.svg; sourceTree = "<group>"; };
 		D26992CA1DEE36BA00A9B298 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D26992CC1DEE373E00A9B298 /* ScaleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleController.swift; sourceTree = "<group>"; };
 		D28A4DBF1DE64F610009FBF8 /* path_a2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_a2.svg; sourceTree = "<group>"; };
 		D2B98C421DE77BAF009D518A /* path_s1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_s1.svg; sourceTree = "<group>"; };
 		D2B98C431DE77BAF009D518A /* path_t1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path_t1.svg; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */,
 				D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */,
 				D26992CA1DEE36BA00A9B298 /* Main.storyboard */,
+				D26992CC1DEE373E00A9B298 /* ScaleController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26992CD1DEE373E00A9B298 /* ScaleController.swift in Sources */,
 				D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */,
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
 			);
