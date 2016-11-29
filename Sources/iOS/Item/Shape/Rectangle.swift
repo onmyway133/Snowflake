@@ -3,7 +3,6 @@ import Reindeer
 
 public class Rectangle: Item {
 
-  public var path: UIBezierPath!
   public let frame: CGRect
   public let cornerRadius: CGPoint
 
@@ -17,13 +16,15 @@ public class Rectangle: Item {
                                 y: attributes.number(key: "ry") ?? 0)
     
     super.init(attributes: attributes)
-    
-    if cornerRadius == CGPoint.zero {
-      self.path = UIBezierPath(rect: frame)
-    } else {
-      self.path = UIBezierPath(roundedRect: frame,
-                               byRoundingCorners: .allCorners,
-                               cornerRadii: CGSize(width: cornerRadius.x, height: cornerRadius.y))
-    }
   }
+
+  public lazy var path: UIBezierPath = {
+    if self.cornerRadius == CGPoint.zero {
+      return UIBezierPath(rect: self.frame)
+    } else {
+      return UIBezierPath(roundedRect: self.frame,
+                               byRoundingCorners: .allCorners,
+                               cornerRadii: CGSize(width: self.cornerRadius.x, height: self.cornerRadius.y))
+    }
+  }()
 }

@@ -3,7 +3,7 @@ import UIKit
 public protocol ShapeAware {
 
   var style: Style { get }
-  var path: UIBezierPath! { get }
+  var path: UIBezierPath { get }
 }
 
 public extension ShapeAware {

@@ -3,22 +3,26 @@ import Reindeer
 
 public class Path: Item {
 
-  public var path: UIBezierPath!
   public let commands: [Command]
   
   public required init(attributes: JSONDictionary) {
     self.commands = Path.parse(string: attributes.string(key: "d") ?? "")
-    
+
     super.init(attributes: attributes)
-    
+  }
+
+  public lazy var path: UIBezierPath = {
     let path = UIBezierPath()
     self.commands.enumerated().forEach { (index, command) in
-      var previousCommand: Command? = index > 0 ? commands[index-1] : nil
+      var previousCommand: Command? = index > 0 ? self.commands[index-1] : nil
       command.act(path: path, previousCommand: previousCommand)
     }
-    
-    self.path = path
-  }
+
+
+    return path
+  }()
+
+  // MARK: - Helper
   
   static func parse(string: String) -> [Command] {
     let set = CharacterSet(charactersIn: Command.letters)

@@ -3,7 +3,6 @@ import Reindeer
 
 public class Ellipse: Item {
   
-  public var path: UIBezierPath!
   public let center: CGPoint
   public let radius: CGPoint
   
@@ -14,11 +13,15 @@ public class Ellipse: Item {
                           y: attributes.number(key: "ry") ?? 0)
     
     super.init(attributes: attributes)
-    
-    self.path = UIBezierPath(ovalIn: rect)
   }
-  
-  var rect: CGRect {
+
+  public lazy var path: UIBezierPath = {
+    return UIBezierPath(ovalIn: Ellipse.rect(center: self.center, radius: self.radius))
+  }()
+
+  // MARK: - Helper
+
+  static func rect(center: CGPoint, radius: CGPoint) -> CGRect {
     return CGRect(x: center.x - radius.x,
                   y: center.y - radius.y,
                   width: radius.x * 2,

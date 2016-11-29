@@ -2,8 +2,7 @@ import UIKit
 import Reindeer
 
 public class Circle: Item, ShapeAware {
-  
-  public var path: UIBezierPath!
+
   public let center: CGPoint
   public let radius: CGFloat
   
@@ -11,11 +10,13 @@ public class Circle: Item, ShapeAware {
     self.center = CGPoint(x: attributes.number(key: "cx") ?? 0,
                           y: attributes.number(key: "cy") ?? 0)
     self.radius = attributes.number(key: "r") ?? 0
-    
+
     super.init(attributes: attributes)
-    
-    self.path = UIBezierPath(arcCenter: center, radius: radius,
+  }
+
+  public lazy var path: UIBezierPath = {
+    return UIBezierPath(arcCenter: self.center, radius: self.radius,
                         startAngle: 0, endAngle: CGFloat.pi * CGFloat(2),
                         clockwise: true)
-  }
+  }()
 }

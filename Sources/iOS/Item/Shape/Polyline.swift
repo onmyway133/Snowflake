@@ -3,21 +3,24 @@ import Reindeer
 
 public class Polyline: Item {
 
-  public var path: UIBezierPath!
   public let points: [CGPoint]
   
   public required init(attributes: JSONDictionary) {
     self.points = Utils.points(string: attributes.string(key: "points"))
     
     super.init(attributes: attributes)
-    
-    self.path = UIBezierPath()
+  }
+
+  public lazy var path: UIBezierPath = {
+    let path = UIBezierPath()
     if let first = self.points.first {
-      self.path?.move(to: first)
-      
+      path.move(to: first)
+
       self.points.dropFirst().forEach {
-        self.path?.addLine(to: $0)
+        path.addLine(to: $0)
       }
     }
-  }
+
+    return path
+  }()
 }

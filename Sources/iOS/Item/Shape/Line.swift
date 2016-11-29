@@ -3,7 +3,6 @@ import Reindeer
 
 public class Line: Item {
 
-  public var path: UIBezierPath!
   public let point1: CGPoint
   public let point2: CGPoint
   
@@ -14,9 +13,13 @@ public class Line: Item {
                           y: attributes.number(key: "y2") ?? 0)
     
     super.init(attributes: attributes)
-    
-    self.path = UIBezierPath()
-    self.path?.move(to: point1)
-    self.path?.addLine(to: point2)
   }
+
+  public lazy var path: UIBezierPath = {
+    let path = UIBezierPath()
+    path.move(to: self.point1)
+    path.addLine(to: self.point2)
+
+    return path
+  }()
 }
