@@ -8,7 +8,10 @@ public protocol ShapeAware {
 
 public extension ShapeAware {
 
-  var layer: CALayer {
+  func layer(transform: CGAffineTransform) -> CAShapeLayer {
+    var path = self.path
+    path.apply(transform)
+
     let layer = CAShapeLayer()
     layer.path = path.cgPath
 

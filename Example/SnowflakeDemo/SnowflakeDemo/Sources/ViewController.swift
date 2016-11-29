@@ -68,6 +68,8 @@ class ViewController: UIViewController {
 
     let svgView = document.svg.view
     self.view.addSubview(svgView)
+
+    print(document.svg.bounds())
   }
 
   override func viewDidLayoutSubviews() {

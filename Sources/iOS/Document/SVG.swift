@@ -29,3 +29,22 @@ public class SVG {
     return view
   }
 }
+
+public extension SVG {
+
+  func bounds() -> CGRect {
+    var rect = CGRect.zero
+
+    items.forEach { item in
+      if let item = item as? ShapeAware {
+        rect = item.path.bounds.union(rect)
+      }
+    }
+
+    return rect
+  }
+
+  func layers(size: CGSize) -> [CALayer] {
+    return []
+  }
+}
