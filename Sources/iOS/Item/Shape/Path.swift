@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Path: Item {
+public class Path: Item, ShapeAware {
 
   public let commands: [Command]
   

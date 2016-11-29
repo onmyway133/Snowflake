@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Polyline: Item {
+public class Polyline: Item, ShapeAware {
 
   public let points: [CGPoint]
   

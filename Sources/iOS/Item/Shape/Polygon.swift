@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Polygon: Item {
+public class Polygon: Item, ShapeAware {
 
   public var points: [CGPoint] = []
   

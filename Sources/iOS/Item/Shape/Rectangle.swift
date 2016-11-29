@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Rectangle: Item {
+public class Rectangle: Item, ShapeAware {
 
   public let frame: CGRect
   public let cornerRadius: CGPoint

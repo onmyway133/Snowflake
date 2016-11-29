@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Ellipse: Item {
+public class Ellipse: Item, ShapeAware {
   
   public let center: CGPoint
   public let radius: CGPoint
