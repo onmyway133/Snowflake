@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Text: Shape {
+public class Text: Item {
   public let point: CGPoint
   public let text: String
 

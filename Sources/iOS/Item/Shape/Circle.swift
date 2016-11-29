@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Circle: Shape {
+public class Circle: Item {
   public let center: CGPoint
   public let radius: CGFloat
   

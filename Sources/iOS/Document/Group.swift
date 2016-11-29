@@ -3,19 +3,19 @@ import Reindeer
 
 public class Group {
 
-  public let shapes: [Shape]
+  public let items: [Item]
 
   public init(element: Element) {
-    var shapes: [Shape] = []
+    var items: [Item] = []
 
     element.children().forEach {
       if $0.name == "g" {
-        shapes.append(contentsOf: Group(element: $0).shapes)
-      } else if let shape = Shape.make(element: $0) {
-        shapes.append(shape)
+        items.append(contentsOf: Group(element: $0).items)
+      } else if let shape = Item.make(element: $0) {
+        items.append(shape)
       }
     }
 
-    self.shapes = shapes
+    self.items = items
   }
 }

@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Image: Shape {
+public class Image: Item {
 
   public required init(attributes: JSONDictionary) {
     super.init(attributes: attributes)

@@ -1,7 +1,7 @@
 import UIKit
 import Reindeer
 
-public class Line: Shape {
+public class Line: Item {
   public let point1: CGPoint
   public let point2: CGPoint
   

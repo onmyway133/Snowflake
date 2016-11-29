@@ -2,7 +2,7 @@ import UIKit
 import Reindeer
 import Reindeer
 
-public class Shape {
+public class Item {
   public let id: String
   public let style: Style
   public var path: UIBezierPath?
@@ -12,8 +12,8 @@ public class Shape {
     self.style = Style(attributes: attributes)
   }
   
-  static func make(element: Element) -> Shape? {
-    let mapping: [String: Shape.Type] = [
+  static func make(element: Element) -> Item? {
+    let mapping: [String: Item.Type] = [
       "path": Path.self,
       "circle": Circle.self,
       "line": Line.self,

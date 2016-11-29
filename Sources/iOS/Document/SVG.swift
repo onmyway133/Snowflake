@@ -3,18 +3,18 @@ import Reindeer
 
 public class SVG {
 
-  public let shapes: [Shape]
+  public let items: [Item]
   public let size: CGSize
 
   public init(element: Element) {
     self.size = CGSize(width: element.attributes.number(key: "width") ?? 0,
                        height: element.attributes.number(key: "height") ?? 0)
 
-    self.shapes = Group(element: element).shapes
+    self.items = Group(element: element).items
   }
 
   public var layers: [CALayer] {
-    return shapes.map {
+    return items.map {
       return $0.layer
     }
   }
