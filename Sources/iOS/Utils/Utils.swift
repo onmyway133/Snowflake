@@ -65,4 +65,10 @@ struct Utils {
 
     return points
   }
+
+  static func scale(from: CGSize, to: CGSize) -> CGPoint {
+    var ratio = min(to.width / from.width, to.height / from.height)
+
+    return CGPoint(x: from.width * ratio, y: from.height * ratio)
+  }
 }
