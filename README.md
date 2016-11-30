@@ -153,7 +153,7 @@ let attributes: [String: Any] = [
   "x": "0",
   "y": "y",
   "width": "100",
-  "height": 100,
+  "height": "100",
   "href": "data:image/png;base64,..."
 ]
 
