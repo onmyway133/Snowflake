@@ -23,7 +23,6 @@ public class Polygon: Item, ShapeAware {
       path.close()
     }
 
-
     return path
   }()
 }

@@ -7,8 +7,8 @@ public class Image: Item {
     super.init(attributes: attributes)
   }
 
-  public var layer: CALayer {
-    let layer = CATextLayer()
+  public func layer() -> CALayer {
+    let layer = CALayer()
 
     return layer
   }

@@ -40,21 +40,26 @@ public extension SVG {
   }
 
   func layers(size: CGSize) -> [CALayer] {
-    var layers = [CALayer]()
-    let ratio = Utils.ratio(from: bounds().size, to: size)
-
-    for item in items {
+    let layers: [CALayer] =  items.flatMap({ item in
       if let item = item as? ShapeAware {
-        let layer = item.layer()
+        return item.layer()
+      } else if let item = item as? Text {
+        return item.layer()
+      } else if let item = item as? Image {
+        return item.layer()
+      } else {
+        return nil
+      }
+    })
 
-        if let cgPath = layer.path {
-          let path = UIBezierPath(cgPath: cgPath)
-          path.apply(CGAffineTransform(scaleX: ratio, y: ratio))
+    for layer in layers {
+      if let layer = layer as? CAShapeLayer, let cgPath = layer.path {
+        let ratio = Utils.ratio(from: bounds().size, to: size)
 
-          layer.path = path.cgPath
-        }
+        let path = UIBezierPath(cgPath: cgPath)
+        path.apply(CGAffineTransform(scaleX: ratio, y: ratio))
 
-        layers.append(layer)
+        layer.path = path.cgPath
       }
     }
 

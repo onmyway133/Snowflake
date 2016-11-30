@@ -7,9 +7,7 @@ class ListController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    title = "❄️ Snowflake ❄️"
-    
+
     if let path = Bundle.main.resourcePath,
       let contents = try? FileManager.default.contentsOfDirectory(atPath: path) {
       items = contents.flatMap { content in

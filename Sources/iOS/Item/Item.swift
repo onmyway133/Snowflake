@@ -10,7 +10,9 @@ public class Item {
     self.id = attributes.string(key: "id") ?? ""
     self.style = Style(attributes: attributes)
   }
-  
+
+  // MARK: - Helper
+
   static func make(element: Element) -> Item? {
     let mapping: [String: Item.Type] = [
       "path": Path.self,
