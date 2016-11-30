@@ -86,7 +86,7 @@ public struct Utils {
     var rect = CGRect.zero
 
     paths.forEach { path in
-      rect = path.boundingBox
+      rect = path.boundingBox.union(rect)
     }
 
     return rect
