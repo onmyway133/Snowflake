@@ -16,18 +16,6 @@ public class SVG {
 
 public extension SVG {
 
-  func bounds() -> CGRect {
-    var rect = CGRect.zero
-
-    items.forEach { item in
-      if let item = item as? ShapeAware {
-        rect = item.path.bounds.union(rect)
-      }
-    }
-
-    return rect
-  }
-
   func view(size: CGSize) -> UIView {
     let view = UIView()
     view.frame.size = size
@@ -52,16 +40,14 @@ public extension SVG {
       }
     })
 
-    for layer in layers {
-      if let layer = layer as? CAShapeLayer, let cgPath = layer.path {
-        let ratio = Utils.ratio(from: bounds().size, to: size)
+    let originalSize = Utils.bounds(layers: layers).size
+    let ratio = Utils.ratio(from: originalSize, to: size)
+    let scale = CGAffineTransform(scaleX: ratio, y: ratio)
+    Utils.transform(layers: layers, transform: scale)
 
-        let path = UIBezierPath(cgPath: cgPath)
-        path.apply(CGAffineTransform(scaleX: ratio, y: ratio))
-
-        layer.path = path.cgPath
-      }
-    }
+    let scaledBounds = Utils.bounds(layers: layers)
+    let translate = CGAffineTransform(translationX: -scaledBounds.origin.x, y: -scaledBounds.origin.y)
+    Utils.transform(layers: layers, transform: translate)
 
     return layers
   }

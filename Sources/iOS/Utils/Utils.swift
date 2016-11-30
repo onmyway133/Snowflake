@@ -1,6 +1,6 @@
 import Foundation
 
-struct Utils {
+public struct Utils {
 
   static func number(string: String) -> CGFloat {
     var number: Float = 0
@@ -66,7 +66,41 @@ struct Utils {
     return points
   }
 
+  // MARK: - Ratio
+
   static func ratio(from: CGSize, to: CGSize) -> CGFloat {
     return min(to.width / from.width, to.height / from.height)
+  }
+
+  // MARK: - Bounds
+
+  public static func bounds(layers: [CALayer]) -> CGRect {
+    let paths: [CGPath] = layers.flatMap {
+      return ($0 as? CAShapeLayer)?.path
+    }
+
+    return bounds(paths: paths)
+  }
+
+  public static func bounds(paths: [CGPath]) -> CGRect {
+    var rect = CGRect.zero
+
+    paths.forEach { path in
+      rect = path.boundingBox
+    }
+
+    return rect
+  }
+
+  public static func transform(layers: [CALayer], transform: CGAffineTransform) {
+    for layer in layers {
+      if let layer = layer as? CAShapeLayer, let cgPath = layer.path {
+
+        let path = UIBezierPath(cgPath: cgPath)
+        path.apply(transform)
+
+        layer.path = path.cgPath
+      }
+    }
   }
 }
