@@ -146,7 +146,7 @@ let view = document.svg.view(size: CGSize(width: 100, height: 100))
 
 ### Image
 
-- Support base64 data uri image
+- Support base64 [Data URI](https://en.wikipedia.org/wiki/Data_URI_scheme)
 
 ```swift
 let attributes: [String: Any] = [
