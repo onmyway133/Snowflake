@@ -135,6 +135,11 @@ let layers = document.svg.layers(size: CGSize(width: 200, height: 100))
 let view = document.svg.view(size: CGSize(width: 100, height: 100))
 ```
 
+<div align = "center">
+<img src="Screenshots/scale.png" />
+<br>
+</div>
+
 ### Text
 
 - TBD
