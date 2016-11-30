@@ -146,7 +146,19 @@ let view = document.svg.view(size: CGSize(width: 100, height: 100))
 
 ### Image
 
-- TBD
+- Support base64 data uri image
+
+```swift
+let attributes: [String: Any] = [
+  "x": "0",
+  "y": "y",
+  "width": "100",
+  "height": 100,
+  "href": "data:image/png;base64,..."
+]
+
+let image = Image(attributes: attributes)
+```
 
 ### Pattern
 
