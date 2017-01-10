@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class LineToCommand: Command {
   public var point: CGPoint = .zero

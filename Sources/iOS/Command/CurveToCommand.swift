@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class CurveToCommand: Command {
   public var controlPoint1: CGPoint = .zero

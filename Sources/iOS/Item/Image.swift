@@ -31,7 +31,7 @@ public class Image: Item {
     let header = "data:image/png;base64,"
     guard let range = string.range(of: header) else { return nil }
 
-    let substring = string.substring(from: range.upperBound)
+    _ = string.substring(from: range.upperBound)
     guard let data = Data(base64Encoded: string, options: .ignoreUnknownCharacters) else { return nil }
 
     return UIImage(data: data)

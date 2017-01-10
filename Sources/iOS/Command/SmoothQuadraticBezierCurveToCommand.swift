@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class SmoothQuadraticBezierCurveToCommand: Command {
   public var controlPoint: CGPoint = .zero

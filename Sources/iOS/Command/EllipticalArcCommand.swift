@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class EllipticalArcCommand: Command {
   public var radius: CGPoint = .zero
