@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class HorizontalLineToCommand: Command {
   public var x: CGFloat = 0

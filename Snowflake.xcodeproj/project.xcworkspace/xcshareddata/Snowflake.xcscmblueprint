@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8D9D1E7A69E28F63CC0D0E3260A692D03551E17B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F5E41AFD9E24450BF0A8D0762E57702E77986ECC" : 9223372036854775807,
+    "8D9D1E7A69E28F63CC0D0E3260A692D03551E17B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BB3FA750-D14E-4E0B-A350-952395507A96",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F5E41AFD9E24450BF0A8D0762E57702E77986ECC" : "..\/..\/Pro\/Missions\/Chargemap\/Developpement\/chargemap-ios",
+    "8D9D1E7A69E28F63CC0D0E3260A692D03551E17B" : "Snowflake\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Snowflake",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Snowflake.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:nverinaud\/Snowflake.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8D9D1E7A69E28F63CC0D0E3260A692D03551E17B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:ChargeMap\/ios-v2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F5E41AFD9E24450BF0A8D0762E57702E77986ECC"
+    }
+  ]
+}

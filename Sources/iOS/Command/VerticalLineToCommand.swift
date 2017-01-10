@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class VerticalLineToCommand: Command {
   public var y: CGFloat = 0

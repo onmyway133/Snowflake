@@ -1,4 +1,6 @@
+import CoreGraphics
 import Foundation
+import UIKit
 
 public class MoveToCommand: Command {
   public var point: CGPoint = .zero
