@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Snowflake"
-  s.summary          = "A short description of Snowflake."
-  s.version          = "0.1.0"
+  s.summary          = "SVG in Swift"
+  s.version          = "2.0.0"
   s.homepage         = "https://github.com/onmyway133/Snowflake"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -20,9 +20,6 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/{iOS,Shared}/**/*'
   s.osx.source_files = 'Sources/{Mac,Shared}/**/*'
 
-  # s.ios.frameworks = 'UIKit', 'Foundation'
-  # s.osx.frameworks = 'Cocoa', 'Foundation'
-
-  s.dependency 'Reindeer'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.dependency 'Reindeers'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end
