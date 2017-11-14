@@ -1,5 +1,5 @@
 import UIKit
-import Reindeer
+import Reindeers
 
 public class Rectangle: Item, ShapeAware {
 

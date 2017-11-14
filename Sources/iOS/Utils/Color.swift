@@ -19,16 +19,16 @@ struct Color {
   // https://github.com/hyperoslo/Hue/blob/master/Source/iOS/UIColor%2BHue.swift
   static func color(hexString: String) -> UIColor {
     var hex = hexString.hasPrefix("#")
-      ? String(hexString.characters.dropFirst())
+      ? String(hexString.dropFirst())
       : hexString
     
-    guard hex.characters.count == 3 || hex.characters.count == 6
+    guard hex.count == 3 || hex.count == 6
       else {
         return UIColor.white
     }
     
-    if hex.characters.count == 3 {
-      for (index, char) in hex.characters.enumerated() {
+    if hex.count == 3 {
+      for (index, char) in hex.enumerated() {
         hex.insert(char, at: hex.index(hex.startIndex, offsetBy: index * 2))
       }
     }

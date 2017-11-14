@@ -1,6 +1,5 @@
 import UIKit
-import Reindeer
-import Reindeer
+import Reindeers
 
 public class Item {
   public let id: String

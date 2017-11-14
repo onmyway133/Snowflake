@@ -1,6 +1,6 @@
 import CoreGraphics
 import Foundation
-import Reindeer
+import Reindeers
 import UIKit
 
 public class SVG {

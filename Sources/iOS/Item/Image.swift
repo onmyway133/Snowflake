@@ -1,5 +1,5 @@
 import UIKit
-import Reindeer
+import Reindeers
 
 public class Image: Item {
 
@@ -29,9 +29,10 @@ public class Image: Item {
     guard !string.isEmpty else { return nil }
 
     let header = "data:image/png;base64,"
-    guard let range = string.range(of: header) else { return nil }
+    guard string.range(of: header) != nil else {
+      return nil
+    }
 
-    _ = string.substring(from: range.upperBound)
     guard let data = Data(base64Encoded: string, options: .ignoreUnknownCharacters) else { return nil }
 
     return UIImage(data: data)

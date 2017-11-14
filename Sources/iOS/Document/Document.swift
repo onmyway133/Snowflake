@@ -1,5 +1,5 @@
 import Foundation
-import Reindeer
+import Reindeers
 
 public typealias JSONDictionary = [String: Any]
 
@@ -15,7 +15,7 @@ public class Document {
   }
   
   public init?(data: Data) {
-    guard let document = try? Reindeer.Document(data: data),
+    guard let document = try? Reindeers.Document(data: data),
       document.rootElement.name == "svg" else { return nil }
 
     self.svg = SVG(element: document.rootElement)

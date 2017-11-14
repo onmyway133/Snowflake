@@ -1,5 +1,5 @@
 import Foundation
-import Reindeer
+import Reindeers
 
 public class Group {
 

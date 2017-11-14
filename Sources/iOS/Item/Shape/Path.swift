@@ -1,5 +1,5 @@
 import UIKit
-import Reindeer
+import Reindeers
 
 public class Path: Item, ShapeAware {
 
@@ -43,7 +43,7 @@ public class Path: Item, ShapeAware {
         commands.append(command)
       }
 
-      if scanner.scanLocation == string.characters.count {
+      if scanner.scanLocation == string.count {
         break
       }
     } while initial!.length > 0

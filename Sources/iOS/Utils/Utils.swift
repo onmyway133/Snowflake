@@ -28,7 +28,7 @@ public struct Utils {
         numbers.append(CGFloat(number))
       }
 
-      if scanner.scanLocation < string.characters.count - 1 {
+      if scanner.scanLocation < string.count - 1 {
         if !result {
           scanner.scanLocation += 1
         }
