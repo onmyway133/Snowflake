@@ -77,7 +77,7 @@ public struct Utils {
   // MARK: - Bounds
 
   public static func bounds(layers: [CALayer]) -> CGRect {
-    let paths: [CGPath] = layers.flatMap {
+    let paths: [CGPath] = layers.compactMap {
       return ($0 as? CAShapeLayer)?.path
     }
 

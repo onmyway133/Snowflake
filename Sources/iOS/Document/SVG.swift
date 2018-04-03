@@ -30,7 +30,7 @@ public extension SVG {
   }
 
   func layers(size: CGSize) -> [CALayer] {
-    let layers: [CALayer] =  items.flatMap({ item in
+    let layers: [CALayer] =  items.compactMap({ item in
       if let item = item as? ShapeAware {
         return item.layer()
       } else if let item = item as? Text {
