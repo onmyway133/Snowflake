@@ -4,6 +4,6 @@ platform :ios, '8.0'
 
 target 'SnowflakeDemo' do
  pod 'Snowflake', path: '../../'
- pod 'Reindeer', git: 'https://github.com/onmyway133/Reindeer.git'
+ pod 'Reindeers', git: 'https://github.com/onmyway133/Reindeers.git'
 end
 

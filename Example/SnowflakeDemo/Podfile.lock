@@ -1,27 +1,27 @@
 PODS:
-  - Reindeer (0.1.0)
-  - Snowflake (0.1.0):
-    - Reindeer
+  - Reindeers (1.4.0)
+  - Snowflake (2.0.0):
+    - Reindeers
 
 DEPENDENCIES:
-  - Reindeer (from `https://github.com/onmyway133/Reindeer.git`)
+  - Reindeers (from `https://github.com/onmyway133/Reindeers.git`)
   - Snowflake (from `../../`)
 
 EXTERNAL SOURCES:
-  Reindeer:
-    :git: https://github.com/onmyway133/Reindeer.git
+  Reindeers:
+    :git: https://github.com/onmyway133/Reindeers.git
   Snowflake:
-    :path: "../../"
+    :path: ../../
 
 CHECKOUT OPTIONS:
-  Reindeer:
-    :commit: 9253621c12fe59a93e5a6d587262cdf2a1ad1a31
-    :git: https://github.com/onmyway133/Reindeer.git
+  Reindeers:
+    :commit: ad168d179c92a02234571b780464501ebb400b38
+    :git: https://github.com/onmyway133/Reindeers.git
 
 SPEC CHECKSUMS:
-  Reindeer: 5c8a1482ee64921a75dab7a1576f744f3c4b0f53
-  Snowflake: e1ea5af063667f25a555ab4a4717db4a50084009
+  Reindeers: 127885abe17f77718c87fa9c58a7ce3a093c2076
+  Snowflake: 4dcae88c3531c69b5e04a31d888b2f6ad34681cb
 
-PODFILE CHECKSUM: ee366032e0cd8f2c89dbc54de6e312e70a17847f
+PODFILE CHECKSUM: 4be3205092676c7c5c0b782c7dc96bd479a27e18
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.4.0
