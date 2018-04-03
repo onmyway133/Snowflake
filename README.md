@@ -172,6 +172,12 @@ it, simply add the following line to your Podfile:
 pod 'Snowflake', git: 'https://github.com/onmyway133/Snowflake'
 ```
 
+or 
+
+```ruby
+pod 'FantasticSnowflake'
+```
+
 **Snowflake** is also available through [Carthage](https://github.com/Carthage/Carthage).
 To install just write into your Cartfile:
 

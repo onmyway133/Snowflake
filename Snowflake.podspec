@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "FantasticSnowflake"
   s.summary          = "SVG in Swift"
-  s.version          = "2.0.0"
+  s.version          = "2.1.0"
   s.homepage         = "https://github.com/onmyway133/Snowflake"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
