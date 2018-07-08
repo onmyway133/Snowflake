@@ -2,6 +2,7 @@ import UIKit
 
 public protocol ShapeAware {
 
+  var id: String { get }
   var style: Style { get }
   var path: UIBezierPath { get }
 }
@@ -11,6 +12,7 @@ public extension ShapeAware {
   func layer() -> CAShapeLayer {
     let layer = CAShapeLayer()
     layer.path = path.cgPath
+    layer.name = id
 
     layer.strokeColor = style.strokeColor?.cgColor
     layer.lineWidth = style.strokeWidth
