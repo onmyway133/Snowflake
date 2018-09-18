@@ -1,5 +1,5 @@
 import UIKit
-import Snowflake
+import FantasticSnowflake
 
 class ListController: UITableViewController {
   
@@ -10,7 +10,7 @@ class ListController: UITableViewController {
 
     if let path = Bundle.main.resourcePath,
       let contents = try? FileManager.default.contentsOfDirectory(atPath: path) {
-      items = contents.flatMap { content in
+      items = contents.compactMap { content in
         if content.hasSuffix("svg") {
           return content.replacingOccurrences(of: ".svg", with: "")
         }
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
   func load() {
     guard let path = Bundle.main.path(forResource: item, ofType: "svg"),
       let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-      let document = Snowflake.Document(data: data)
+    let document = Document(data: data)
     else { return }
 
     let svgView = document.svg.view(size: CGSize(width: 300, height: 300))

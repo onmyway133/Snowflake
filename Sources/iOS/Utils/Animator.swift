@@ -17,7 +17,7 @@ public struct Animator {
     let group = CAAnimationGroup()
     group.duration = 4
     group.animations = [stroke, opacity]
-    group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    group.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
 
     layer.add(group, forKey: nil)
   }
