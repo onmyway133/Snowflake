@@ -1,5 +1,5 @@
 import UIKit
-import Snowflake
+import FantasticSnowflake
 
 class ScaleController: UIViewController {
 

@@ -50,8 +50,8 @@ public class Style {
     guard let fillRule = fillRule else { return nil }
     
     let mapping: [String: String] = [
-      "nonzero": kCAFillRuleNonZero,
-      "evenodd": kCAFillRuleEvenOdd
+      "nonzero": CAShapeLayerFillRule.nonZero.rawValue,
+      "evenodd": CAShapeLayerFillRule.evenOdd.rawValue
     ]
     
     return mapping[fillRule]

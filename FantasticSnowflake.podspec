@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/iOS/**/*'
 
   s.dependency 'Reindeers'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 end

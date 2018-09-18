@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'SnowflakeDemo' do
- pod 'Snowflake', path: '../../'
+ pod 'FantasticSnowflake', path: '../../'
  pod 'Reindeers', git: 'https://github.com/onmyway133/Reindeers.git'
 end
 

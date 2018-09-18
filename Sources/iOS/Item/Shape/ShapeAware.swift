@@ -20,15 +20,15 @@ public extension ShapeAware {
     layer.opacity = Float(style.opacity)
 
     if let fillRule = style.fillRule {
-      layer.fillRule = fillRule
+      layer.fillRule = CAShapeLayerFillRule(rawValue: fillRule)
     }
 
     if let lineCap = style.lineCap {
-      layer.lineCap = lineCap
+      layer.lineCap = CAShapeLayerLineCap(rawValue: lineCap)
     }
 
     if let lineJoin = style.lineJoin {
-      layer.lineJoin = lineJoin
+      layer.lineJoin = CAShapeLayerLineJoin(rawValue: lineJoin)
     }
 
     if let miterLimit = style.miterLimit {
