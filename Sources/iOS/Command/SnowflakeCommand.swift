@@ -1,6 +1,6 @@
 //
 //  Command.swift
-//  Snowflake
+//  SnowflakeCommand
 //
 //  Created by khoa on 14/05/2019.
 //

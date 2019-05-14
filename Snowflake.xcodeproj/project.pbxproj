@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		03EACDB41E24FAAA006984AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB21E24FAAA006984AC /* CoreGraphics.framework */; };
 		03EACDB51E24FAAA006984AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB31E24FAAA006984AC /* UIKit.framework */; };
-		03EACDDF1E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
-		03EACDE01E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
-		03EACDE11E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
-		03EACDE21E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
+		03EACDDF1E2500A4006984AC /* SnowflakeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */; };
+		03EACDE01E2500A4006984AC /* SnowflakeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */; };
+		03EACDE11E2500A4006984AC /* SnowflakeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */; };
+		03EACDE21E2500A4006984AC /* SnowflakeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */; };
 		03EACE071E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE081E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE091E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
@@ -122,7 +122,7 @@
 /* Begin PBXFileReference section */
 		03EACDB21E24FAAA006984AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		03EACDB31E24FAAA006984AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		03EACDB91E2500A4006984AC /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowflakeCommand.swift; sourceTree = "<group>"; };
 		03EACDC41E2500A4006984AC /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		03EACDC51E2500A4006984AC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		03EACDC61E2500A4006984AC /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		03EACDB71E2500A4006984AC /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				03EACDB91E2500A4006984AC /* Command.swift */,
+				03EACDB91E2500A4006984AC /* SnowflakeCommand.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -554,7 +554,7 @@
 				03EACE1B1E2500A4006984AC /* Item.swift in Sources */,
 				03EACE3F1E2500A4006984AC /* Text.swift in Sources */,
 				03EACE471E2500A4006984AC /* Color.swift in Sources */,
-				03EACDDF1E2500A4006984AC /* Command.swift in Sources */,
+				03EACDDF1E2500A4006984AC /* SnowflakeCommand.swift in Sources */,
 				03EACE0F1E2500A4006984AC /* Style.swift in Sources */,
 				03EACE131E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE271E2500A4006984AC /* Line.swift in Sources */,
@@ -597,7 +597,7 @@
 				03EACE551E2500A4006984AC /* Utils.swift in Sources */,
 				03EACE351E2500A4006984AC /* Polyline.swift in Sources */,
 				03EACE091E2500A4006984AC /* Document.swift in Sources */,
-				03EACDE11E2500A4006984AC /* Command.swift in Sources */,
+				03EACDE11E2500A4006984AC /* SnowflakeCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,7 +612,7 @@
 				03EACE1C1E2500A4006984AC /* Item.swift in Sources */,
 				03EACE401E2500A4006984AC /* Text.swift in Sources */,
 				03EACE481E2500A4006984AC /* Color.swift in Sources */,
-				03EACDE01E2500A4006984AC /* Command.swift in Sources */,
+				03EACDE01E2500A4006984AC /* SnowflakeCommand.swift in Sources */,
 				03EACE101E2500A4006984AC /* Style.swift in Sources */,
 				03EACE141E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE281E2500A4006984AC /* Line.swift in Sources */,
@@ -655,7 +655,7 @@
 				03EACE561E2500A4006984AC /* Utils.swift in Sources */,
 				03EACE361E2500A4006984AC /* Polyline.swift in Sources */,
 				03EACE0A1E2500A4006984AC /* Document.swift in Sources */,
-				03EACDE21E2500A4006984AC /* Command.swift in Sources */,
+				03EACDE21E2500A4006984AC /* SnowflakeCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
