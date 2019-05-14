@@ -42,14 +42,14 @@ public extension SVG {
       }
     })
 
-    let originalSize = SnowflakeUtils.bounds(layers: layers).size
-    let ratio = SnowflakeUtils.ratio(from: originalSize, to: size)
+    let originalSize = Utils.bounds(layers: layers).size
+    let ratio = Utils.ratio(from: originalSize, to: size)
     let scale = CGAffineTransform(scaleX: ratio, y: ratio)
-    SnowflakeUtils.transform(layers: layers, transform: scale)
+    Utils.transform(layers: layers, transform: scale)
 
-    let scaledBounds = SnowflakeUtils.bounds(layers: layers)
+    let scaledBounds = Utils.bounds(layers: layers)
     let translate = CGAffineTransform(translationX: -scaledBounds.origin.x, y: -scaledBounds.origin.y)
-    SnowflakeUtils.transform(layers: layers, transform: translate)
+    Utils.transform(layers: layers, transform: translate)
 
     return layers
   }

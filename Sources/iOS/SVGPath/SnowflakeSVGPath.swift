@@ -1,5 +1,5 @@
 //
-//  Snowflake.swift
+//  SnowflakeSVGPath.swift
 //  Command
 //
 //  https://github.com/onmyway133/Snowflake
@@ -10,7 +10,7 @@ import CoreGraphics
 import Foundation
 import UIKit
 
-public extension UIBezierPath {
+extension UIBezierPath {
     static func from(svgPath: String) -> UIBezierPath {
         let path = UIBezierPath()
 
@@ -47,27 +47,24 @@ public extension UIBezierPath {
     }
 }
 
-public class Command {
-
-    public enum Kind {
+class Command {
+    enum Kind {
         case absolute, relative
     }
 
-    public let kind: Kind
+    let kind: Kind
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         self.kind = kind
     }
 
-    public func act(path: UIBezierPath, previousCommand: Command?) {
-
-    }
+    func act(path: UIBezierPath, previousCommand: Command?) {}
 }
 
-public extension Command {
+extension Command {
     class func make(initial: String, string: String) -> Command? {
         let type: Command.Type? = availableCommands[initial.uppercased()]
-        let kind: Kind = SnowflakeUtils.isLowercase(string: initial) ? .relative : .absolute
+        let kind: Kind = Utils.isLowercase(string: initial) ? .relative : .absolute
         return type?.init(string: string, kind: kind)
     }
 
@@ -95,23 +92,23 @@ public extension Command {
     }
 }
 
-public class ClosePathCommand: Command {
+class ClosePathCommand: Command {
 
     convenience init() {
         self.init(string: "", kind: .absolute)
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         path.close()
     }
 }
 
-public class CurveToCommand: Command {
-    public var controlPoint1: CGPoint = .zero
-    public var controlPoint2: CGPoint = .zero
-    public var endPoint: CGPoint = .zero
+class CurveToCommand: Command {
+    var controlPoint1: CGPoint = .zero
+    var controlPoint2: CGPoint = .zero
+    var endPoint: CGPoint = .zero
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -122,7 +119,7 @@ public class CurveToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if kind == .relative {
             endPoint = path.currentPoint.add(p: endPoint)
             controlPoint1 = path.currentPoint.add(p: controlPoint1)
@@ -133,14 +130,14 @@ public class CurveToCommand: Command {
     }
 }
 
-public class EllipticalArcCommand: Command {
-    public var radius: CGPoint = .zero
-    public var rotation: CGFloat = 0
-    public var largeArcFlag: Bool = false
-    public var sweepFlag: Bool = false
-    public var endPoint: CGPoint = .zero
+class EllipticalArcCommand: Command {
+    var radius: CGPoint = .zero
+    var rotation: CGFloat = 0
+    var largeArcFlag: Bool = false
+    var sweepFlag: Bool = false
+    var endPoint: CGPoint = .zero
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -153,7 +150,7 @@ public class EllipticalArcCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         switch kind {
         case .absolute:
             break
@@ -163,10 +160,10 @@ public class EllipticalArcCommand: Command {
     }
 }
 
-public class HorizontalLineToCommand: Command {
-    public var x: CGFloat = 0
+class HorizontalLineToCommand: Command {
+    var x: CGFloat = 0
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -175,7 +172,7 @@ public class HorizontalLineToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         let end: CGPoint
 
         switch kind {
@@ -189,10 +186,10 @@ public class HorizontalLineToCommand: Command {
     }
 }
 
-public class LineToCommand: Command {
-    public var point: CGPoint = .zero
+class LineToCommand: Command {
+    var point: CGPoint = .zero
 
-    required public init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -201,7 +198,7 @@ public class LineToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if kind == .relative {
             point = path.currentPoint.add(p: point)
         }
@@ -210,10 +207,10 @@ public class LineToCommand: Command {
     }
 }
 
-public class MoveToCommand: Command {
-    public var point: CGPoint = .zero
+class MoveToCommand: Command {
+    var point: CGPoint = .zero
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -222,7 +219,7 @@ public class MoveToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if kind == .relative {
             point = path.currentPoint.add(p: point)
         }
@@ -231,11 +228,11 @@ public class MoveToCommand: Command {
     }
 }
 
-public class QuadraticBezierCurveCommand: Command {
-    public var controlPoint: CGPoint = .zero
-    public var endPoint: CGPoint = .zero
+class QuadraticBezierCurveCommand: Command {
+    var controlPoint: CGPoint = .zero
+    var endPoint: CGPoint = .zero
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -245,7 +242,7 @@ public class QuadraticBezierCurveCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if kind == .relative {
             endPoint = path.currentPoint.add(p: endPoint)
             controlPoint = path.currentPoint.add(p: controlPoint)
@@ -255,12 +252,12 @@ public class QuadraticBezierCurveCommand: Command {
     }
 }
 
-public class SmoothCurveToCommand: Command {
-    public var controlPoint1: CGPoint = .zero
-    public var controlPoint2: CGPoint = .zero
-    public var endPoint: CGPoint = .zero
+class SmoothCurveToCommand: Command {
+    var controlPoint1: CGPoint = .zero
+    var controlPoint2: CGPoint = .zero
+    var endPoint: CGPoint = .zero
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -270,7 +267,7 @@ public class SmoothCurveToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if let previousCommand = previousCommand as? CurveToCommand {
             controlPoint1 = previousCommand.controlPoint2.reflect(around: path.currentPoint)
         } else if let previousCommand = previousCommand as? SmoothCurveToCommand {
@@ -288,11 +285,11 @@ public class SmoothCurveToCommand: Command {
     }
 }
 
-public class SmoothQuadraticBezierCurveToCommand: Command {
-    public var controlPoint: CGPoint = .zero
-    public var endPoint: CGPoint = .zero
+class SmoothQuadraticBezierCurveToCommand: Command {
+    var controlPoint: CGPoint = .zero
+    var endPoint: CGPoint = .zero
 
-    required public init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -301,7 +298,7 @@ public class SmoothQuadraticBezierCurveToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         if let previousCommand = previousCommand as? QuadraticBezierCurveCommand {
             controlPoint = previousCommand.controlPoint.reflect(around: path.currentPoint)
         } else if let previousCommand = previousCommand as? SmoothQuadraticBezierCurveToCommand {
@@ -318,10 +315,10 @@ public class SmoothQuadraticBezierCurveToCommand: Command {
     }
 }
 
-public class VerticalLineToCommand: Command {
-    public var y: CGFloat = 0
+class VerticalLineToCommand: Command {
+    var y: CGFloat = 0
 
-    public required init(string: String, kind: Kind) {
+    required init(string: String, kind: Kind) {
         super.init(string: string, kind: kind)
 
         let numbers = SnowflakeUtils.numbers(string: string)
@@ -330,7 +327,7 @@ public class VerticalLineToCommand: Command {
         }
     }
 
-    public override func act(path: UIBezierPath, previousCommand: Command?) {
+    override func act(path: UIBezierPath, previousCommand: Command?) {
         let end: CGPoint
 
         switch kind {
@@ -344,16 +341,7 @@ public class VerticalLineToCommand: Command {
     }
 }
 
-public struct SnowflakeUtils {
-
-    static func number(string: String) -> CGFloat {
-        var number: Float = 0
-        let scanner = Scanner(string: string)
-        scanner.scanFloat(&number)
-
-        return CGFloat(number)
-    }
-
+private struct SnowflakeUtils {
     static func numbers(string: String?) -> [CGFloat] {
         guard let string = string else {
             return []
@@ -392,64 +380,9 @@ public struct SnowflakeUtils {
             return false
         }
     }
-
-    static func points(string: String?) -> [CGPoint] {
-        var numbers = self.numbers(string: string)
-        if numbers.count % 2 == 1 {
-            numbers.append(0)
-        }
-
-        var points = [CGPoint]()
-
-        numbers.enumerated().forEach { (index, _) in
-            if index % 2 == 0 {
-                points.append(CGPoint(x: numbers[index], y: numbers[index+1]))
-            }
-        }
-
-        return points
-    }
-
-    // MARK: - Ratio
-
-    static func ratio(from: CGSize, to: CGSize) -> CGFloat {
-        return min(to.width / from.width, to.height / from.height)
-    }
-
-    // MARK: - Bounds
-
-    public static func bounds(layers: [CALayer]) -> CGRect {
-        let paths: [CGPath] = layers.compactMap {
-            return ($0 as? CAShapeLayer)?.path
-        }
-
-        return bounds(paths: paths)
-    }
-
-    public static func bounds(paths: [CGPath]) -> CGRect {
-        var rect = CGRect.zero
-
-        paths.forEach { path in
-            rect = path.boundingBox.union(rect)
-        }
-
-        return rect
-    }
-
-    public static func transform(layers: [CALayer], transform: CGAffineTransform) {
-        for layer in layers {
-            if let layer = layer as? CAShapeLayer, let cgPath = layer.path {
-
-                let path = UIBezierPath(cgPath: cgPath)
-                path.apply(transform)
-
-                layer.path = path.cgPath
-            }
-        }
-    }
 }
 
-extension CGPoint {
+private extension CGPoint {
     func add(p: CGPoint) -> CGPoint {
         return CGPoint(x: x + p.x, y: y + p.y)
     }

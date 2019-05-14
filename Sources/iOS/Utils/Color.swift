@@ -43,7 +43,7 @@ struct Color {
     let string = rgbString.replacingOccurrences(of: "rgb(", with: "")
       .replacingOccurrences(of: ")", with: "")
     let components: [CGFloat] = string.components(separatedBy: ",").map {
-      return SnowflakeUtils.number(string: $0)
+      return Utils.number(string: $0)
     }
     
     if components.count == 3 {

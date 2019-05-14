@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		03EACDB41E24FAAA006984AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB21E24FAAA006984AC /* CoreGraphics.framework */; };
 		03EACDB51E24FAAA006984AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB31E24FAAA006984AC /* UIKit.framework */; };
-		03EACDDF1E2500A4006984AC /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Snowflake.swift */; };
-		03EACDE01E2500A4006984AC /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Snowflake.swift */; };
-		03EACDE11E2500A4006984AC /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Snowflake.swift */; };
-		03EACDE21E2500A4006984AC /* Snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Snowflake.swift */; };
+		03EACDDF1E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */; };
+		03EACDE01E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */; };
+		03EACDE11E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */; };
+		03EACDE21E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */; };
 		03EACE071E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE081E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE091E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
@@ -94,6 +94,7 @@
 		D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80A71DAE2718008185FF /* SharedTests.swift */; };
 		D24F80AB1DAE2727008185FF /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80AA1DAE2727008185FF /* macOSTests.swift */; };
 		D29B65A01FBB20AA00BBFBDE /* Reindeers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29B659F1FBB20AA00BBFBDE /* Reindeers.framework */; };
+		D2D8FE5E228B53840084782E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8FE5D228B53840084782E /* Utils.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Snowflake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Snowflake.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Snowflake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Snowflake.framework */; };
 /* End PBXBuildFile section */
@@ -118,7 +119,7 @@
 /* Begin PBXFileReference section */
 		03EACDB21E24FAAA006984AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		03EACDB31E24FAAA006984AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		03EACDB91E2500A4006984AC /* Snowflake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snowflake.swift; sourceTree = "<group>"; };
+		03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowflakeSVGPath.swift; sourceTree = "<group>"; };
 		03EACDC41E2500A4006984AC /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		03EACDC51E2500A4006984AC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		03EACDC61E2500A4006984AC /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		D24F80A71DAE2718008185FF /* SharedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		D24F80AA1DAE2727008185FF /* macOSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = macOSTests.swift; sourceTree = "<group>"; };
 		D29B659F1FBB20AA00BBFBDE /* Reindeers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reindeers.framework; path = Carthage/Build/iOS/Reindeers.framework; sourceTree = "<group>"; };
+		D2D8FE5D228B53840084782E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Snowflake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snowflake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +197,7 @@
 		03EACDB61E2500A4006984AC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				03EACDB71E2500A4006984AC /* Command */,
+				03EACDB71E2500A4006984AC /* SVGPath */,
 				03EACDC31E2500A4006984AC /* Document */,
 				03EACDC81E2500A4006984AC /* Item */,
 				03EACDD51E2500A4006984AC /* Utils */,
@@ -203,12 +205,12 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		03EACDB71E2500A4006984AC /* Command */ = {
+		03EACDB71E2500A4006984AC /* SVGPath */ = {
 			isa = PBXGroup;
 			children = (
-				03EACDB91E2500A4006984AC /* Snowflake.swift */,
+				03EACDB91E2500A4006984AC /* SnowflakeSVGPath.swift */,
 			);
-			path = Command;
+			path = SVGPath;
 			sourceTree = "<group>";
 		};
 		03EACDC31E2500A4006984AC /* Document */ = {
@@ -255,6 +257,7 @@
 				03EACDD71E2500A4006984AC /* Color.swift */,
 				03EACDD81E2500A4006984AC /* ColorList.swift */,
 				03EACDD91E2500A4006984AC /* Extensions.swift */,
+				D2D8FE5D228B53840084782E /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -548,7 +551,7 @@
 				03EACE1B1E2500A4006984AC /* Item.swift in Sources */,
 				03EACE3F1E2500A4006984AC /* Text.swift in Sources */,
 				03EACE471E2500A4006984AC /* Color.swift in Sources */,
-				03EACDDF1E2500A4006984AC /* Snowflake.swift in Sources */,
+				03EACDDF1E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */,
 				03EACE0F1E2500A4006984AC /* Style.swift in Sources */,
 				03EACE131E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE271E2500A4006984AC /* Line.swift in Sources */,
@@ -558,6 +561,7 @@
 				03EACE371E2500A4006984AC /* Rectangle.swift in Sources */,
 				03EACE1F1E2500A4006984AC /* Circle.swift in Sources */,
 				03EACE2F1E2500A4006984AC /* Polygon.swift in Sources */,
+				D2D8FE5E228B53840084782E /* Utils.swift in Sources */,
 				03EACE071E2500A4006984AC /* Document.swift in Sources */,
 				03EACE4F1E2500A4006984AC /* Extensions.swift in Sources */,
 				03EACE3B1E2500A4006984AC /* ShapeAware.swift in Sources */,
@@ -589,7 +593,7 @@
 				D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */,
 				03EACE351E2500A4006984AC /* Polyline.swift in Sources */,
 				03EACE091E2500A4006984AC /* Document.swift in Sources */,
-				03EACDE11E2500A4006984AC /* Snowflake.swift in Sources */,
+				03EACDE11E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +608,7 @@
 				03EACE1C1E2500A4006984AC /* Item.swift in Sources */,
 				03EACE401E2500A4006984AC /* Text.swift in Sources */,
 				03EACE481E2500A4006984AC /* Color.swift in Sources */,
-				03EACDE01E2500A4006984AC /* Snowflake.swift in Sources */,
+				03EACDE01E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */,
 				03EACE101E2500A4006984AC /* Style.swift in Sources */,
 				03EACE141E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE281E2500A4006984AC /* Line.swift in Sources */,
@@ -645,7 +649,7 @@
 				D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */,
 				03EACE361E2500A4006984AC /* Polyline.swift in Sources */,
 				03EACE0A1E2500A4006984AC /* Document.swift in Sources */,
-				03EACDE21E2500A4006984AC /* Snowflake.swift in Sources */,
+				03EACDE21E2500A4006984AC /* SnowflakeSVGPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
