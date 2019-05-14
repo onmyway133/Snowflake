@@ -7,7 +7,7 @@ extension Dictionary {
   func number(key: String) -> CGFloat? {
     if let key = key as? Key,
       let value = self[key] as? String {
-      return Utils.number(string: value)
+      return SnowflakeUtils.number(string: value)
     }
     
     return nil
@@ -50,31 +50,5 @@ extension String {
 
   func trim() -> String {
     return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-  }
-}
-
-extension CGPoint {
-  func add(p: CGPoint) -> CGPoint {
-    return CGPoint(x: x + p.x, y: y + p.y)
-  }
-
-  func add(x: CGFloat) -> CGPoint {
-    return CGPoint(x: self.x + x, y: y)
-  }
-
-  func add(y: CGFloat) -> CGPoint {
-    return CGPoint(x: x, y: self.y + y)
-  }
-
-  func subtract(p: CGPoint) -> CGPoint {
-    return CGPoint(x: x - p.x, y: y - p.y)
-  }
-
-  func reflect(point: CGPoint, old: CGPoint) -> CGPoint {
-    return CGPoint(x: 2*x - point.x + old.x, y: 2*y - point.y + old.y)
-  }
-
-  func reflect(around p: CGPoint) -> CGPoint {
-    return CGPoint(x: p.x*2 - x, y: p.y*2 - y)
   }
 }

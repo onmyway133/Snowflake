@@ -6,7 +6,7 @@ public class Polyline: Item, ShapeAware {
   public let points: [CGPoint]
   
   public required init(attributes: JSONDictionary) {
-    self.points = Utils.points(string: attributes.string(key: "points"))
+    self.points = SnowflakeUtils.points(string: attributes.string(key: "points"))
     
     super.init(attributes: attributes)
   }
