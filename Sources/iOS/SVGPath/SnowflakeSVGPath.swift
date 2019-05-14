@@ -1,6 +1,6 @@
 //
 //  SnowflakeSVGPath.swift
-//  Command
+//  Snowflake
 //
 //  https://github.com/onmyway133/Snowflake
 //  Created by khoa on 14/05/2019.
@@ -64,7 +64,7 @@ class Command {
 extension Command {
     class func make(initial: String, string: String) -> Command? {
         let type: Command.Type? = availableCommands[initial.uppercased()]
-        let kind: Kind = Utils.isLowercase(string: initial) ? .relative : .absolute
+        let kind: Kind = SnowflakeUtils.isLowercase(string: initial) ? .relative : .absolute
         return type?.init(string: string, kind: kind)
     }
 
