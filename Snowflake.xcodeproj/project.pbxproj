@@ -9,50 +9,10 @@
 /* Begin PBXBuildFile section */
 		03EACDB41E24FAAA006984AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB21E24FAAA006984AC /* CoreGraphics.framework */; };
 		03EACDB51E24FAAA006984AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EACDB31E24FAAA006984AC /* UIKit.framework */; };
-		03EACDDB1E2500A4006984AC /* ClosePathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB81E2500A4006984AC /* ClosePathCommand.swift */; };
-		03EACDDC1E2500A4006984AC /* ClosePathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB81E2500A4006984AC /* ClosePathCommand.swift */; };
-		03EACDDD1E2500A4006984AC /* ClosePathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB81E2500A4006984AC /* ClosePathCommand.swift */; };
-		03EACDDE1E2500A4006984AC /* ClosePathCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB81E2500A4006984AC /* ClosePathCommand.swift */; };
 		03EACDDF1E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
 		03EACDE01E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
 		03EACDE11E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
 		03EACDE21E2500A4006984AC /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDB91E2500A4006984AC /* Command.swift */; };
-		03EACDE31E2500A4006984AC /* CurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBA1E2500A4006984AC /* CurveToCommand.swift */; };
-		03EACDE41E2500A4006984AC /* CurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBA1E2500A4006984AC /* CurveToCommand.swift */; };
-		03EACDE51E2500A4006984AC /* CurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBA1E2500A4006984AC /* CurveToCommand.swift */; };
-		03EACDE61E2500A4006984AC /* CurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBA1E2500A4006984AC /* CurveToCommand.swift */; };
-		03EACDE71E2500A4006984AC /* EllipticalArcCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */; };
-		03EACDE81E2500A4006984AC /* EllipticalArcCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */; };
-		03EACDE91E2500A4006984AC /* EllipticalArcCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */; };
-		03EACDEA1E2500A4006984AC /* EllipticalArcCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */; };
-		03EACDEB1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */; };
-		03EACDEC1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */; };
-		03EACDED1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */; };
-		03EACDEE1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */; };
-		03EACDEF1E2500A4006984AC /* LineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBD1E2500A4006984AC /* LineToCommand.swift */; };
-		03EACDF01E2500A4006984AC /* LineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBD1E2500A4006984AC /* LineToCommand.swift */; };
-		03EACDF11E2500A4006984AC /* LineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBD1E2500A4006984AC /* LineToCommand.swift */; };
-		03EACDF21E2500A4006984AC /* LineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBD1E2500A4006984AC /* LineToCommand.swift */; };
-		03EACDF31E2500A4006984AC /* MoveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBE1E2500A4006984AC /* MoveToCommand.swift */; };
-		03EACDF41E2500A4006984AC /* MoveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBE1E2500A4006984AC /* MoveToCommand.swift */; };
-		03EACDF51E2500A4006984AC /* MoveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBE1E2500A4006984AC /* MoveToCommand.swift */; };
-		03EACDF61E2500A4006984AC /* MoveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBE1E2500A4006984AC /* MoveToCommand.swift */; };
-		03EACDF71E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */; };
-		03EACDF81E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */; };
-		03EACDF91E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */; };
-		03EACDFA1E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */; };
-		03EACDFB1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */; };
-		03EACDFC1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */; };
-		03EACDFD1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */; };
-		03EACDFE1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */; };
-		03EACDFF1E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */; };
-		03EACE001E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */; };
-		03EACE011E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */; };
-		03EACE021E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */; };
-		03EACE031E2500A4006984AC /* VerticalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */; };
-		03EACE041E2500A4006984AC /* VerticalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */; };
-		03EACE051E2500A4006984AC /* VerticalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */; };
-		03EACE061E2500A4006984AC /* VerticalLineToCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */; };
 		03EACE071E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE081E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
 		03EACE091E2500A4006984AC /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EACDC41E2500A4006984AC /* Document.swift */; };
@@ -162,17 +122,7 @@
 /* Begin PBXFileReference section */
 		03EACDB21E24FAAA006984AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		03EACDB31E24FAAA006984AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		03EACDB81E2500A4006984AC /* ClosePathCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosePathCommand.swift; sourceTree = "<group>"; };
 		03EACDB91E2500A4006984AC /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		03EACDBA1E2500A4006984AC /* CurveToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveToCommand.swift; sourceTree = "<group>"; };
-		03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalArcCommand.swift; sourceTree = "<group>"; };
-		03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLineToCommand.swift; sourceTree = "<group>"; };
-		03EACDBD1E2500A4006984AC /* LineToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineToCommand.swift; sourceTree = "<group>"; };
-		03EACDBE1E2500A4006984AC /* MoveToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveToCommand.swift; sourceTree = "<group>"; };
-		03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticBezierCurveCommand.swift; sourceTree = "<group>"; };
-		03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothCurveToCommand.swift; sourceTree = "<group>"; };
-		03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothQuadraticBezierCurveToCommand.swift; sourceTree = "<group>"; };
-		03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLineToCommand.swift; sourceTree = "<group>"; };
 		03EACDC41E2500A4006984AC /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		03EACDC51E2500A4006984AC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		03EACDC61E2500A4006984AC /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
@@ -261,17 +211,7 @@
 		03EACDB71E2500A4006984AC /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				03EACDB81E2500A4006984AC /* ClosePathCommand.swift */,
 				03EACDB91E2500A4006984AC /* Command.swift */,
-				03EACDBA1E2500A4006984AC /* CurveToCommand.swift */,
-				03EACDBB1E2500A4006984AC /* EllipticalArcCommand.swift */,
-				03EACDBC1E2500A4006984AC /* HorizontalLineToCommand.swift */,
-				03EACDBD1E2500A4006984AC /* LineToCommand.swift */,
-				03EACDBE1E2500A4006984AC /* MoveToCommand.swift */,
-				03EACDBF1E2500A4006984AC /* QuadraticBezierCurveCommand.swift */,
-				03EACDC01E2500A4006984AC /* SmoothCurveToCommand.swift */,
-				03EACDC11E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift */,
-				03EACDC21E2500A4006984AC /* VerticalLineToCommand.swift */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -537,6 +477,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D5B2E8951C3A780C00C0327D;
@@ -610,33 +551,23 @@
 				03EACE231E2500A4006984AC /* Ellipse.swift in Sources */,
 				03EACE4B1E2500A4006984AC /* ColorList.swift in Sources */,
 				03EACE2B1E2500A4006984AC /* Path.swift in Sources */,
-				03EACDEB1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */,
-				03EACDDB1E2500A4006984AC /* ClosePathCommand.swift in Sources */,
 				03EACE1B1E2500A4006984AC /* Item.swift in Sources */,
-				03EACDEF1E2500A4006984AC /* LineToCommand.swift in Sources */,
-				03EACDE71E2500A4006984AC /* EllipticalArcCommand.swift in Sources */,
 				03EACE3F1E2500A4006984AC /* Text.swift in Sources */,
 				03EACE471E2500A4006984AC /* Color.swift in Sources */,
 				03EACDDF1E2500A4006984AC /* Command.swift in Sources */,
 				03EACE0F1E2500A4006984AC /* Style.swift in Sources */,
 				03EACE131E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE271E2500A4006984AC /* Line.swift in Sources */,
-				03EACDFB1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */,
 				03EACE0B1E2500A4006984AC /* Group.swift in Sources */,
 				03EACE431E2500A4006984AC /* Animator.swift in Sources */,
 				03EACE171E2500A4006984AC /* Image.swift in Sources */,
 				03EACE371E2500A4006984AC /* Rectangle.swift in Sources */,
 				03EACE1F1E2500A4006984AC /* Circle.swift in Sources */,
 				03EACE531E2500A4006984AC /* Utils.swift in Sources */,
-				03EACDFF1E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */,
 				03EACE2F1E2500A4006984AC /* Polygon.swift in Sources */,
-				03EACE031E2500A4006984AC /* VerticalLineToCommand.swift in Sources */,
 				03EACE071E2500A4006984AC /* Document.swift in Sources */,
 				03EACE4F1E2500A4006984AC /* Extensions.swift in Sources */,
 				03EACE3B1E2500A4006984AC /* ShapeAware.swift in Sources */,
-				03EACDF71E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */,
-				03EACDF31E2500A4006984AC /* MoveToCommand.swift in Sources */,
-				03EACDE31E2500A4006984AC /* CurveToCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,33 +575,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EACDF11E2500A4006984AC /* LineToCommand.swift in Sources */,
 				03EACE3D1E2500A4006984AC /* ShapeAware.swift in Sources */,
 				03EACE2D1E2500A4006984AC /* Path.swift in Sources */,
 				03EACE191E2500A4006984AC /* Image.swift in Sources */,
 				03EACE391E2500A4006984AC /* Rectangle.swift in Sources */,
-				03EACDED1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */,
 				03EACE4D1E2500A4006984AC /* ColorList.swift in Sources */,
 				03EACE451E2500A4006984AC /* Animator.swift in Sources */,
-				03EACDE51E2500A4006984AC /* CurveToCommand.swift in Sources */,
 				03EACE0D1E2500A4006984AC /* Group.swift in Sources */,
 				03EACE211E2500A4006984AC /* Circle.swift in Sources */,
-				03EACDDD1E2500A4006984AC /* ClosePathCommand.swift in Sources */,
 				03EACE411E2500A4006984AC /* Text.swift in Sources */,
 				03EACE311E2500A4006984AC /* Polygon.swift in Sources */,
 				D24F80A41DAE22C4008185FF /* iOSTests.swift in Sources */,
-				03EACDF91E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */,
 				03EACE291E2500A4006984AC /* Line.swift in Sources */,
 				03EACE151E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE111E2500A4006984AC /* Style.swift in Sources */,
-				03EACDE91E2500A4006984AC /* EllipticalArcCommand.swift in Sources */,
-				03EACDF51E2500A4006984AC /* MoveToCommand.swift in Sources */,
-				03EACE051E2500A4006984AC /* VerticalLineToCommand.swift in Sources */,
-				03EACE011E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */,
 				03EACE251E2500A4006984AC /* Ellipse.swift in Sources */,
 				03EACE491E2500A4006984AC /* Color.swift in Sources */,
 				03EACE1D1E2500A4006984AC /* Item.swift in Sources */,
-				03EACDFD1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */,
 				03EACE511E2500A4006984AC /* Extensions.swift in Sources */,
 				D24F80A81DAE2718008185FF /* SharedTests.swift in Sources */,
 				03EACE551E2500A4006984AC /* Utils.swift in Sources */,
@@ -688,33 +609,23 @@
 				03EACE241E2500A4006984AC /* Ellipse.swift in Sources */,
 				03EACE4C1E2500A4006984AC /* ColorList.swift in Sources */,
 				03EACE2C1E2500A4006984AC /* Path.swift in Sources */,
-				03EACDEC1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */,
-				03EACDDC1E2500A4006984AC /* ClosePathCommand.swift in Sources */,
 				03EACE1C1E2500A4006984AC /* Item.swift in Sources */,
-				03EACDF01E2500A4006984AC /* LineToCommand.swift in Sources */,
-				03EACDE81E2500A4006984AC /* EllipticalArcCommand.swift in Sources */,
 				03EACE401E2500A4006984AC /* Text.swift in Sources */,
 				03EACE481E2500A4006984AC /* Color.swift in Sources */,
 				03EACDE01E2500A4006984AC /* Command.swift in Sources */,
 				03EACE101E2500A4006984AC /* Style.swift in Sources */,
 				03EACE141E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE281E2500A4006984AC /* Line.swift in Sources */,
-				03EACDFC1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */,
 				03EACE0C1E2500A4006984AC /* Group.swift in Sources */,
 				03EACE441E2500A4006984AC /* Animator.swift in Sources */,
 				03EACE181E2500A4006984AC /* Image.swift in Sources */,
 				03EACE381E2500A4006984AC /* Rectangle.swift in Sources */,
 				03EACE201E2500A4006984AC /* Circle.swift in Sources */,
 				03EACE541E2500A4006984AC /* Utils.swift in Sources */,
-				03EACE001E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */,
 				03EACE301E2500A4006984AC /* Polygon.swift in Sources */,
-				03EACE041E2500A4006984AC /* VerticalLineToCommand.swift in Sources */,
 				03EACE081E2500A4006984AC /* Document.swift in Sources */,
 				03EACE501E2500A4006984AC /* Extensions.swift in Sources */,
 				03EACE3C1E2500A4006984AC /* ShapeAware.swift in Sources */,
-				03EACDF81E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */,
-				03EACDF41E2500A4006984AC /* MoveToCommand.swift in Sources */,
-				03EACDE41E2500A4006984AC /* CurveToCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,33 +633,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EACDF21E2500A4006984AC /* LineToCommand.swift in Sources */,
 				03EACE3E1E2500A4006984AC /* ShapeAware.swift in Sources */,
 				03EACE2E1E2500A4006984AC /* Path.swift in Sources */,
 				03EACE1A1E2500A4006984AC /* Image.swift in Sources */,
 				03EACE3A1E2500A4006984AC /* Rectangle.swift in Sources */,
-				03EACDEE1E2500A4006984AC /* HorizontalLineToCommand.swift in Sources */,
 				03EACE4E1E2500A4006984AC /* ColorList.swift in Sources */,
 				03EACE461E2500A4006984AC /* Animator.swift in Sources */,
-				03EACDE61E2500A4006984AC /* CurveToCommand.swift in Sources */,
 				03EACE0E1E2500A4006984AC /* Group.swift in Sources */,
 				03EACE221E2500A4006984AC /* Circle.swift in Sources */,
-				03EACDDE1E2500A4006984AC /* ClosePathCommand.swift in Sources */,
 				03EACE421E2500A4006984AC /* Text.swift in Sources */,
 				03EACE321E2500A4006984AC /* Polygon.swift in Sources */,
 				D24F80AB1DAE2727008185FF /* macOSTests.swift in Sources */,
-				03EACDFA1E2500A4006984AC /* QuadraticBezierCurveCommand.swift in Sources */,
 				03EACE2A1E2500A4006984AC /* Line.swift in Sources */,
 				03EACE161E2500A4006984AC /* SVG.swift in Sources */,
 				03EACE121E2500A4006984AC /* Style.swift in Sources */,
-				03EACDEA1E2500A4006984AC /* EllipticalArcCommand.swift in Sources */,
-				03EACDF61E2500A4006984AC /* MoveToCommand.swift in Sources */,
-				03EACE061E2500A4006984AC /* VerticalLineToCommand.swift in Sources */,
-				03EACE021E2500A4006984AC /* SmoothQuadraticBezierCurveToCommand.swift in Sources */,
 				03EACE261E2500A4006984AC /* Ellipse.swift in Sources */,
 				03EACE4A1E2500A4006984AC /* Color.swift in Sources */,
 				03EACE1E1E2500A4006984AC /* Item.swift in Sources */,
-				03EACDFE1E2500A4006984AC /* SmoothCurveToCommand.swift in Sources */,
 				03EACE521E2500A4006984AC /* Extensions.swift in Sources */,
 				D24F80A91DAE2718008185FF /* SharedTests.swift in Sources */,
 				03EACE561E2500A4006984AC /* Utils.swift in Sources */,
@@ -828,7 +729,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -882,7 +783,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -911,7 +812,6 @@
 				PRODUCT_NAME = Snowflake;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -935,7 +835,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Snowflake-iOS";
 				PRODUCT_NAME = Snowflake;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -953,7 +852,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.SnowflakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -970,7 +868,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.SnowflakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -994,7 +891,6 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1017,7 +913,6 @@
 				PRODUCT_NAME = Snowflake;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1037,7 +932,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Snowflake-MacTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1057,7 +951,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Snowflake-MacTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
