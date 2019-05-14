@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "FantasticSnowflake"
   s.summary          = "SVG in Swift"
-  s.version          = "2.2.0"
+  s.version          = "2.3.0"
   s.homepage         = "https://github.com/onmyway133/Snowflake"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/iOS/**/*'
 
   s.dependency 'Reindeers'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  s.swift_version = '5.0'
 end
