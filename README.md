@@ -1,5 +1,9 @@
 # Snowflake
 
+<a href="https://www.buymeacoffee.com/onmyway133"> 
+    <img alt="Buy Me A Coffee" src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" style="height: auto !important; width: auto !important;" /> 
+</a>
+
 ❤️ Support my apps ❤️ 
 
 - [Push Hero - pure Swift native macOS application to test push notifications](https://onmyway133.com/pushhero)
