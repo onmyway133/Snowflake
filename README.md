@@ -4,15 +4,7 @@
     <img alt="Buy Me A Coffee" src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" style="height: auto !important; width: auto !important;" /> 
 </a>
 
-❤️ Support my apps ❤️ 
-
-- [Push Hero - pure Swift native macOS application to test push notifications](https://onmyway133.com/pushhero)
-- [PastePal - Pasteboard, note and shortcut manager](https://onmyway133.com/pastepal)
-- [Quick Check - smart todo manager](https://onmyway133.com/quickcheck)
-- [Alias - App and file shortcut manager](https://onmyway133.com/alias)
-- [My other apps](https://onmyway133.com/apps/)
-
-❤️❤️😇😍🤘❤️❤️
+Checkout https://indiegoodies.com/
 
 [![Version](https://img.shields.io/cocoapods/v/Snowflake.svg?style=flat)](http://cocoadocs.org/docsets/Snowflake)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
